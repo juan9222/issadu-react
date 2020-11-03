@@ -1,0 +1,93 @@
+@import '../../assets/animate.css';
+
+.Navbar__Link {
+    color: #FFFFFF;
+    font-size: 1vw;
+}
+.Navbar__Flex-Right {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 16vw;
+    cursor: pointer;
+}
+.Navbar__Column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 14vw;
+    height: 27vw;
+    padding: 2vw 0vw 0vw 0vw;
+}
+.Navbar__Text {
+    font-size: 1.5vw;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 0.1vw;
+}
+.Navbar__Flex-Left {
+    display: flex;
+    flex-direction: row;
+    width: 16vw;
+    cursor: pointer;
+}
+
+.Navbar__HR {
+    width: 14vw;
+    background: #00AEEF;
+    height: 0.3vw;
+    border-style: none;
+}
+
+.Navbar__Background {
+    padding: 2vw 1vw;
+    background: #3F414C;
+    height: 100vh;
+    align-items: center;
+    width: 16vw;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    font-family: "Anton";
+    z-index: 100;
+}
+
+.Navbar__Background--Open {
+    animation-name: slideInLeft;
+    animation-duration: 1s;
+}
+
+.Navbar__LogoMenu {
+    width: 13vw;
+}
+
+.Navbar__Whatsapp {
+    width: 2vw;
+}
+
+.Navbar__Facebook {
+    width: 2vw;
+}
+.Navbar__Instagram {
+    width: 2vw;
+}
+.Navbar__Pinterest {
+    width: 2vw;
+}
+
+.Navbar__Close {
+    width: 3vw;
+  }
+.Navbar__Logo {
+    z-index: 100;
+    transform: translate(1vw,2vw);
+    width: 6vw;
+    cursor: pointer;
+    position: fixed;
+}
+
+.Navbar__Flex-Socials {
+    display: flex;
+    justify-content: space-between;
+    width: 13vw;
+    box-sizing: border-box;
+  }

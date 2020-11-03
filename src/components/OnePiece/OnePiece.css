@@ -1,0 +1,294 @@
+.OnePiece {
+    display: flex;
+    position: relative;
+    height: auto;
+    width: 100vw;
+    box-sizing: border-box;
+    padding: 2vw 0vw 0vw 0vw;
+}
+.OnePiece__Customizer {
+    position: relative;
+    width: 32vw;
+    margin: 0vw 0vw 0vw 6vw;
+}
+.OnePiece-Main {
+    z-index: 6;
+    width: 36vw;
+    position: relative;
+    height: 40vw;
+    border-style: solid;
+    border-color: black;
+    border-width: 0.1vw;
+    margin: 0vw 0vw 0vw 10vw;
+  }
+  .PreCheckout__OP {
+      position: absolute;
+      transform: translate(4vw, -6vw);
+  }
+
+  .OnePiece__Color {
+    background-color: white;
+    position: relative;
+    width: 36vw;
+    height: 40vw;
+    z-index: 5;
+    margin: 0vw 0vw 0vw -36vw;
+  }
+
+
+.OnePiece__Color--White {
+    background-color: white;
+}
+
+.OnePiece__Size-Title {
+    font-family: "Muli";
+    font-size: 1vw;
+}
+
+.OnePiece__Flex-Size {
+    display: flex;
+    font-family: "Muli";
+    font-size: 1vw;
+    width: fit-content;
+    justify-content: flex-start;
+    padding: 1vw 0vw;
+    cursor: pointer;
+}
+
+.OnePiece__Size {
+    color: #3F414C;
+    font-size: 2vw;
+    margin: 0vw 1vw;
+}
+
+.OnePiece__Titles {
+    font-family: "Muli";
+    font-size: 1vw;
+    color: #3F414C;
+}
+
+.OnePiece__Closet {
+    position: absolute;
+    transform: translate(75vw,-30.6vw);
+  }
+
+.OnePiece__Models {
+    width: 5vw;
+}
+
+.OnePiece__One {
+    font-family: "Muli";
+    background: #3F414C;
+    color: #FFFF;
+    text-align: center;
+    padding: 1vw 1.7vw;
+    border-radius: 3vw;
+    font-size: 1vw;
+    margin: 0.7vw 0vw;
+    width: 12vw;
+}
+
+.OnePiece__Save {
+    font-family: "Muli";
+    color: #3F414C;
+    font-size: 1vw;
+    margin: 0.5vw 0vw;
+}
+
+
+.OnePiece__Design {
+    font-family: "Muli";
+    color: #3F414C;
+    font-size: 1vw;
+    margin: 0.5vw 0vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0vw 2.7vw 0vw 0vw;
+}
+
+.OnePiece__Hook {
+    width: 0.8vw
+}
+
+.OnePiece__Question {
+    width: 1.4vw
+}
+
+.OnePiece__Contact {
+    font-family: "Muli";
+    color: #3F414C;
+    font-size: 1vw;
+    margin: 0.5vw 0vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0vw 0.7vw 0vw 0vw;
+}
+
+input[type=radio] {
+    border: 0vw;
+    width: 1vw;
+    height: 1vw;
+}
+
+.OnePiece__BathRobe {
+    font-family: "Muli";
+    background:#00AEEF;
+    text-align: center;
+    color: #FFFF;
+    padding: 1vw 1.7vw;
+    border-radius: 3vw;
+    margin: 0.5vw 0vw;
+    font-size: 1vw;
+    width: 12vw;
+}
+
+.OnePiece__Print {
+    width: 3vw;
+    margin: 0.2vw 0.2vw;
+}
+
+.OnePiece__Print-White {
+    width: 3vw;
+    border: 0.001vw solid #000;
+    border-radius: 100vw;
+}
+
+.OnePiece__Yellow {
+    cursor: pointer;
+    background: #F1AF13;
+    width: 3vw;
+    height: 3vw;
+    border-radius: 100vw;
+}
+
+.OnePiece__Pink {
+    cursor: pointer;
+    background: #EB8B9C;
+    width: 3vw;
+    height: 3vw;
+    border-radius: 100vw;
+}
+.OnePiece__Black {
+    cursor: pointer;
+    background: #231F20;
+    width: 3vw;
+    height: 3vw;
+    border-radius: 100vw;
+}
+.OnePiece__Blue {
+    cursor: pointer;
+    background: #0AA6B1;
+    width: 3vw;
+    height: 3vw;
+    border-radius: 100vw;
+}
+.OnePiece__Red {
+    cursor: pointer;
+    width: 3vw;
+    height: 3vw;
+    background: #E91C2A;
+    border-radius: 100vw;
+}
+
+.OnePiece__Flex {
+    display: flex;
+    justify-content: flex-start;
+    padding: 1vw 0vw;
+    width: fit-content;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    height: auto;
+  }
+
+.OnePiece__Flex-Models{
+    width: 32vw;
+    display: flex;
+    justify-content: space-between;
+    padding: 1vw 0vw;
+}
+
+.OnePiece__Title {
+    font-family: "Muli";
+    color: #00AEEF;
+    font-size: 1.2vw;
+  }
+
+.OnePiece__Sub {
+    font-family: "Anton";
+    color: #3F414C;
+    font-size: 3vw;
+    padding: 1vw 0vw;
+}
+
+.OnePiece__Sub-Blue {
+    color: #00AEEF;
+}
+
+.OnePiece__Flex-Selector {
+    width: 18vw;
+    display: flex;
+    justify-content: space-between;
+    padding: 0vw 0vw 1vw 0vw;
+}
+
+.OnePiece__Top {
+    font-family: "Anton";
+    color: #3F414C;
+    font-size: 3vw;
+    cursor: pointer
+}
+
+.OnePiece__Top--Selected {
+    color: #00AEEF !important;
+}
+
+.OnePiece__Pipe {
+    font-family: "Anton";
+    color: #3F414C;
+    font-size: 3vw;
+}
+
+.OnePiece__Panty {
+    font-family: "Anton";
+    color: #3F414C;
+    font-size: 3vw;
+    cursor: pointer
+}
+
+
+.OnePiece__HR {
+    width: 46vw;
+    height: 0.1vw;
+    border-style: none;
+    transform: translate(45vw, 48vw);
+    background: #3F414C;
+}
+
+.OnePiece__Step1-Title {
+    font-family: "Muli",sans-serif;
+    font-size: 1.4vw;
+    font-weight: 800;
+    color: #00AEEF;
+    padding: 1vw 0vw;
+}
+
+.OnePiece__Step1-Sub {
+    font-family: "Muli",sans-serif;
+    font-size: 1vw;
+    padding: 0vw 0vw 1vw 0vw;
+    color: #3F414C;
+}
+
+.OnePiece__OnePiece {
+    color: #FFFFFF !important;
+    background: #00AEEF;
+    padding: 1vw 2vw;
+    border-radius: 1vw;
+    font-family: "Anton";
+    font-size: 2vw;
+    cursor: pointer;
+    border-style: solid;
+    width: fit-content;
+}

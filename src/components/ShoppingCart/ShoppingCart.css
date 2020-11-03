@@ -1,0 +1,22 @@
+.ShoppingCart {
+  position: absolute;
+  z-index: 4;
+  transform: translate(91vw,3vw);
+  width: 3vw;
+  cursor: pointer;
+  background: white;
+  border-radius: 5vw;
+  padding: 1vw 1vw;
+}
+
+.svg-inline--fa {
+  color: #3F414C;
+}
+
+.ShoppingCart__Buy {
+  background: #00AEEF;
+  color: white;
+  text-decoration: none;
+  padding: 1vw 2vw;
+  border-radius: 2vw;
+}

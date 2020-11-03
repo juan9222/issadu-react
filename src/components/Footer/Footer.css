@@ -1,0 +1,64 @@
+.Footer {
+    display: flex;
+    position: relative;
+    width: 100vw;
+    background: #3F414C;
+    z-index: 20;
+    color: #FFFFFF;
+    font-family: "Muli";
+    padding: 2vw 2vw;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+
+.Footer__Logo {
+    cursor: pointer;
+    width: 4.5vw;
+}
+
+.Footer__Whatsapp {
+    cursor: pointer;
+    width: 2vw;
+}
+
+.Footer__Facebook {
+    cursor: pointer;
+    width: 2vw;
+}
+.Footer__Instagram {
+    cursor: pointer;
+    width: 2vw;
+}
+.Footer__Pinterest {
+    cursor: pointer;
+    width: 2vw;
+}
+
+.Footer__Service {
+    font-size: 0.9vw;
+    display: flex;
+    align-items: center;
+}
+
+.Footer__Account {
+    font-size: 0.9vw;
+    display: flex;
+    align-items: center;
+}
+
+.Footer__Service-Title{
+    color: #00AEEF;
+}
+
+.Footer__Links {
+    text-decoration: none;
+    cursor: pointer;
+    color: #FFFFFF;
+}
+
+.Footer__Socials {
+    width: 9.4vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

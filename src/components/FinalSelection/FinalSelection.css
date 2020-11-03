@@ -1,0 +1,38 @@
+.FinalSelection {
+  width: 43vw;
+  padding: 2vw 0vw 0vw 2vw;
+  font-family: "Muli";
+}
+
+.FinalSelection__Title {
+    font-size: 4vw;
+    font-family: "Anton";
+    color: #00AEEF
+}
+
+
+.FinalSelection__Flex-Item {
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+    display: flex;
+    align-items: center;
+    height: auto;
+    justify-content: space-between;
+}
+
+.FinalSelection__Item-Description {
+    font-size: 1.5vw;
+}
+
+.FinalSelection__Item-Price {
+    font-size: 1.5vw;
+}
+
+.FinalSelection__Flex {
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+    display: flex;
+    align-items: center;
+    height: auto;
+    justify-content: space-between;
+}

@@ -1,0 +1,26 @@
+.BestSellers {
+    position: absolute;
+    display: flex;
+    z-index: 5;
+    transform: translate(0vw,56.4vw);
+    width: 100vw;
+    height: 140.6vw;
+}
+
+.BestSellers__Title {
+    font-size: 5vw;
+    font-family: "Anton";
+    color: #00AEEF;
+    transform: translate(22vw,5vw);
+    width: 70vw;
+  }
+
+.BestSellers__Sellers {
+    color: #3F414C;
+}
+
+.BestSellers__Image {
+    position: absolute;
+    width: 10vw;
+    transform: translate(11vw, 0vw);
+}

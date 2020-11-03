@@ -1,0 +1,20 @@
+.Contact {
+    padding: 15.2vw 26vw;
+    box-sizing: border-box;
+    background-image: url("../../assets/Extras/Us.jpg");
+    background-size: cover;
+}
+
+.Contact__Title {
+    font-family: "Anton", sans-serif;
+    font-size: 4vw;
+    color: #3F414C;
+    padding: 0vw 0vw 3vw 0vw;
+  }
+
+.Contact__Description {
+    font-family: "Muli", sans-serif;
+    font-size: 2vw;
+    color: #3F414C;
+    width: 45vw;
+  }

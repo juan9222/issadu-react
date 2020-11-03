@@ -1,0 +1,32 @@
+.Legal {
+    padding: 15.2vw 26vw;
+    box-sizing: border-box;
+    background-image: url("../../assets/Extras/politicas.jpg");
+    background-size: cover;
+}
+
+.Legal__Title {
+    font-family: "Anton", sans-serif;
+    font-size: 4vw;
+    color: #3F414C;
+    padding: 0vw 0vw 3vw 0vw;
+  }
+
+.Legal__Description {
+    font-family: "Muli", sans-serif;
+    font-size: 2vw;
+    color: #3F414C;
+    width: 45vw;
+  }
+
+.Legal__Button{
+    background: #00AEEF;
+    font-family: "Muli", sans-serif;
+    color: white;
+    font-size: 1.8vw;
+    border-radius: 1vw;
+    margin-top: 1vw;
+    border-style: solid;
+    border-color: #3F414C;
+    padding: 0.4vw 2.4vw 0.4vw 2.4vw;
+}

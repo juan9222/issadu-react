@@ -1,0 +1,277 @@
+
+  .Bikini {
+    display: flex;
+    position: relative;
+    height: auto;
+    width: 100vw;
+    box-sizing: border-box;
+    padding: 2vw 0vw 0vw 0vw;
+  }
+  .Bikini-Main__Top {
+    z-index: 6;
+    width: 36vw;
+    position: relative;
+    height: 20vw;
+    border-style: solid;
+    border-color: black;
+    border-width: 0.1vw;
+    border-bottom-color: transparent;
+  }
+  .Bikini-Main__Bottom {
+    z-index: 6;
+    width: 36vw;
+    position: relative;
+    height: 20vw;
+    border-style: solid;
+    border-color: black;
+    border-width: 0.1vw;
+    border-top-color: transparent;
+  }
+
+  .Bikini__Color {
+    background-color: white;
+    position: relative;
+    width: 35vw;
+    height: auto;
+    z-index: 5;
+    margin: 0vw 0vw 0vw -36vw;
+  }
+
+  .Bikini__Color-Top {
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 36vw;
+    height: 20vw;
+  }
+  .Bikini__Color-Bottom {
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 36vw;
+    height: 19.5vw;
+  }
+
+
+.Bikini__Color-Top--White {
+    background-color: white;
+}
+
+.Bikini__Customizer {
+    position: relative;
+    width: 32vw;
+    margin: 0vw 0vw 0vw 6vw;  
+}
+
+.Bikini__Closet {
+    position: relative;
+  }
+
+
+.Bikini__One {
+    font-family: "Muli";
+    background: #3F414C;
+    color: #FFFF;
+    text-align: center;
+    padding: 1vw 1.7vw;
+    border-radius: 3vw;
+    font-size: 1vw;
+    margin: 0.7vw 0vw;
+    width: 12vw;
+}
+
+.Bikini__Save {
+    font-family: "Muli";
+    color: #3F414C;
+    font-size: 1vw;
+    margin: 0.5vw 0vw;
+}
+
+
+.Bikini__Design {
+    font-family: "Muli";
+    color: #3F414C;
+    font-size: 1vw;
+    margin: 0.5vw 0vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0vw 2.7vw 0vw 0vw;
+}
+
+.Bikini__Hook {
+    width: 0.8vw
+}
+
+.Bikini__Question {
+    width: 1.4vw
+}
+
+.Bikini__Contact {
+    font-family: "Muli";
+    color: #3F414C;
+    font-size: 1vw;
+    margin: 0.5vw 0vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0vw 0.7vw 0vw 0vw;
+}
+
+input[type=radio] {
+    border: 0vw;
+    width: 1vw;
+    height: 1vw;
+}
+
+.Bikini__BathRobe {
+    font-family: "Muli";
+    background:#00AEEF;
+    text-align: center;
+    color: #FFFF;
+    padding: 1vw 1.7vw;
+    border-radius: 3vw;
+    margin: 0.5vw 0vw;
+    font-size: 1vw;
+    width: 12vw;
+}
+
+.Bikini__Print {
+    width: 3vw;
+    margin: 0.2vw 0.2vw;
+  }
+
+.Bikini__Print-White {
+    width: 3vw;
+    border: 0.001vw solid #000;
+    border-radius: 100vw;
+}
+
+.Bikini__Yellow {
+    cursor: pointer;
+    background: #F1AF13;
+    width: 3vw;
+    height: 3vw;
+    border-radius: 100vw;
+}
+
+.Bikini__Pink {
+    cursor: pointer;
+    background: #EB8B9C;
+    width: 3vw;
+    height: 3vw;
+    border-radius: 100vw;
+}
+.Bikini__Black {
+    cursor: pointer;
+    background: #231F20;
+    width: 3vw;
+    height: 3vw;
+    border-radius: 100vw;
+}
+.Bikini__Blue {
+    cursor: pointer;
+    background: #0AA6B1;
+    width: 3vw;
+    height: 3vw;
+    border-radius: 100vw;
+}
+.Bikini__Red {
+    cursor: pointer;
+    width: 3vw;
+    height: 3vw;
+    background: #E91C2A;
+    border-radius: 100vw;
+}
+
+.Bikini__Flex {
+    display: flex;
+    justify-content: flex-start;
+    padding: 1vw 0vw;
+    width: fit-content;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    height: auto;
+}
+
+.Bikini__Flex-Models{
+    width: 25vw;
+    display: flex;
+    justify-content: space-between;
+    padding: 1vw 0vw;
+}
+
+.Bikini__Title {
+    font-family: "Anton";
+    color: #00AEEF;
+    font-size: 1.8vw;
+}
+
+.Bikini__Top-Step1-Title {
+    font-family: "Muli",sans-serif;
+    font-size: 1.4vw;
+    font-weight: 800;
+    color: #00AEEF;
+    padding: 1vw 0vw;
+}
+
+.Bikini__Top-Step1-Sub {
+    font-family: "Muli",sans-serif;
+    font-size: 1vw;
+    padding: 0vw 0vw 1vw 0vw;
+    color: #3F414C;
+}
+
+.Bikini__Flex-Selector {
+    width: 18vw;
+    display: flex;
+    justify-content: space-between;
+    padding: 0vw 0vw 0vw 0vw;
+    align-items: center;
+}
+
+.Bikini__Top {
+    font-family: "Anton";
+    color: #3F414C;
+    font-size: 2vw;
+    cursor: pointer;
+    border-style: solid;
+    border-radius: 1vw;
+    padding: 0.5vw 1.9vw;
+  }
+
+.Bikini__Top--Selected {
+    color: #FFFFFF !important;
+    background: #00AEEF;
+    padding: 1vw 2vw;
+    border-radius: 1vw;
+}
+
+.Bikini__Pipe {
+    font-family: "Anton";
+    color: #3F414C;
+    font-size: 3vw;
+}
+
+.Bikini__Panty {
+    font-family: "Anton";
+    color: #3F414C;
+    font-size: 2vw;
+    cursor: pointer;
+    border-style: solid;
+    border-radius: 1vw;
+    padding: 0.8vw 1vw;
+  }
+
+.Bikini__Girl {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 6;
+    padding: 0vw 0vw 0vw 10vw;
+}
+
+.Bikini__Print--Selected {
+    border-style: solid;
+    border-radius: 100vw;
+    border-width: 0.2vw;
+    border-color: #00AEEF;
+  }

@@ -1,0 +1,40 @@
+.BikiniPanty {
+    display: flex;
+    flex-direction: column;
+}
+.Bikini__Size-Title {
+    font-family: "Muli";
+    font-size: 1vw;
+}
+
+.Bikini__Flex-Size {
+    display: flex;
+    font-family: "Muli";
+    font-size: 1vw;
+    width: 9vw;
+    justify-content: space-between;
+    padding: 1vw 0vw;
+    cursor: pointer
+}
+
+.Bikini__Titles {
+    font-family: "Muli";
+    font-size: 1vw;
+    color: #3F414C;
+}
+.BikiniPanty__Title {
+    font-family: "Muli",sans-serif;
+    font-size: 1.4vw;
+    font-weight: 800;
+    color: #00AEEF;
+    padding: 1vw 0vw;
+}
+
+.BikiniPanty__Sub{
+    font-family: "Muli",sans-serif;
+    font-size: 1vw;
+    padding: 0vw 0vw 1vw 0vw;
+    color: #3F414C;
+    width: 29vw;
+    text-align: justify;
+}

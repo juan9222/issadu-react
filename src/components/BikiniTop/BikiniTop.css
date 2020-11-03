@@ -1,0 +1,62 @@
+.BikiniTop {
+    display: flex;
+    flex-direction: column;
+}
+.Bikini__Size-Title {
+    font-family: "Muli";
+    font-size: 1vw;
+}
+
+.Bikini__Flex-Size {
+    display: flex;
+    font-family: "Muli";
+    font-size: 1vw;
+    width: fit-content;
+    justify-content: space-between;
+    padding: 1vw 0vw;
+    cursor: pointer;
+    align-items: center;
+}
+
+.BikiniTop__Title {
+    font-family: "Muli",sans-serif;
+    font-size: 1.4vw;
+    font-weight: 800;
+    color: #00AEEF;
+    padding: 1vw 0vw;
+}
+
+.BikiniTop__Sub {
+    font-family: "Muli",sans-serif;
+    font-size: 1vw;
+    padding: 0vw 0vw 1vw 0vw;
+    color: #3F414C;
+    width: 29vw;
+    text-align: justify;
+  }
+
+.BikiniTop__Size {
+    color: #3F414C;
+    font-size: 2vw;
+    margin: 0vw 1vw;
+  }
+
+  .Bikini__Models {
+    width: 4vw;
+    padding: 0.5vw 0.5vw;
+}
+
+.Bikini__Models--Selected {
+    border-radius: 100vw;
+    border-style: solid;
+    border-color: #00AEEF;
+    border-width: 0.2vw;
+}
+
+.BikiniTop__Size--Selected {
+    border-radius: 100vw;
+    border-style: solid;
+    border-color: #00AEEF;
+    border-width: 0.2vw;
+    padding: 0.4vw 0.8vw;
+}

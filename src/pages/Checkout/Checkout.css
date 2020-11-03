@@ -1,0 +1,76 @@
+.Checkout {
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    padding: 2vw 6vw 2vw 9vw;
+}
+
+.Checkout__Logo{
+    width: 18vw;
+    height: 10vw;
+    margin: 0vw 0vw 2vw 0vw;
+}
+
+.Checkout__Input{
+    border: 1px transparent solid;
+    background-clip: padding-box;
+    border-radius: 5px;
+    display: block;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0.9285714286em 0.7857142857em;
+    word-break: normal;
+    line-height: inherit;
+    background-color: white;
+    color: #333333;
+    border-color: #d9d9d9;
+    margin: 1vw 0vw;
+}
+
+.Checkout__Label {
+    font-family: "Muli";
+}
+
+.Checkout__Label-Contact {
+    font-size: 2vw;
+}
+
+.Checkout__Mail {
+    margin: 1vw 0vw;
+    width: 35vw;
+}
+
+.Checkout__Name {
+    margin-right: 1vw;
+}
+
+.Checkout__Flex {
+    display: flex;
+    width: 35vw;
+}
+
+.Checkout__CC {
+    width: 35vw;
+}
+
+.Checkout_Location {
+    margin-right: 1vw;
+}
+
+.Checkout__Separator {
+    width: 42vw;
+    border-right-style: solid;
+    border-width: 0.1vw;
+    border-color: #d9d9d9;
+}
+
+.Checkout_Buy {
+  font-size: 2vw;
+  background-color: #00AEEF;
+  border-style: hidden;
+  padding: 1vw 13.6vw;
+  border-radius: 4.7vw;
+  color: #FFFFFF;
+}
+

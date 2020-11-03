@@ -1,0 +1,86 @@
+.SizeCalculator {
+    position: absolute;
+    transform: translate(0vw, 0.6vw);
+    z-index: 100;
+    background: #00000070;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.SizeCalculator__Container {
+    width: fit-content;
+    height: auto;
+    background: #3F414C;
+    padding: 4vw 4vw;
+}
+
+.SizeCalculator___Title-Flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.SizeCalculator___Title {
+    font-size: 2vw;
+    font-family: "Muli",sans-serif;
+    color: #00AEEF;
+}
+
+.SizeCalculator__Description{
+    color: white;
+    font-family: "Muli", sans-serif;
+    width: 40vw;
+    text-align: justify;
+    padding: 2vw 0vw;
+  }
+
+.SizeCalculator__Measure {
+    font-family: "Muli", sans-serif;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.SizeCalculator__Column {
+    display: flex;
+    flex-direction: column;
+}
+
+.SizeCalculator__Row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1vw 0vw;
+    width: 17vw;
+  }
+
+.SizeCalculator__Input {
+    background: #00AEEF;
+    border-style: solid;
+    border-color: transparent;
+    border-radius: 1vw;
+    width: 4vw;
+    color: white;
+  }
+
+  .SizeCalculator__Close {
+    width: 3vw;
+    cursor: pointer;
+  }
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
