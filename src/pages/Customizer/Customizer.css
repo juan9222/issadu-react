@@ -43,7 +43,7 @@
     position: absolute;
     width: 14vw;
     z-index: 7;
-    transform: translate(84vw, 11vw);
+    transform: translate(84vw, 15vw);
   }
   
   .Customizer__Snail {
@@ -110,15 +110,15 @@
 }
 
 .Customizer__Advice {
-    position: absolute;
+    position: relative;
     font-family: "Anton", sans-serif;
-    transform: translate(84vw, -38vw);
     color: #3F414C;
     width: 12vw;
     font-size: 3vw;
     text-align: left;
     line-height: 2.7vw;
-}
+    margin: -18vw 0vw 0vw 86vw;
+  }
 
 .Customizer__Advice-Text {
     color: #00AEEF;

@@ -9,8 +9,11 @@ import Star from '../../assets/Customizer/Estrella-min.png'
 import Coconut from '../../assets/Customizer/Coco-min.png'
 import Snail from '../../assets/Customizer/32.jpg'
 import SizeCalculator from "../../components/SizeCalculator/SizeCalculator.js"
-// import Hook from '../../assets/Swimsuits/hook.svg'
-// import Question from '../../assets/Swimsuits/questions.svg'
+import OnePieceProvider from "../../context/OnePieceContext.js"
+import TopProvider from "../../context/TopContext.js"
+import PantyProvider from "../../context/PantyContext.js"
+import Hook from '../../assets/Swimsuits/hook.svg'
+import Question from '../../assets/Swimsuits/questions.svg'
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { faHeart } from '@fortawesome/free-regular-svg-icons'
 import './Customizer.css'
@@ -18,9 +21,14 @@ import './Customizer.css'
 const Customizer = (props) => {
     const bikiniOrOnePiece = props.location.state.bikiniOrOnePiece;
     const [mode, setMode] = useState(bikiniOrOnePiece);
+    const [piece, setPiece] = useState("Top")
+    // const [mode, setMode] = useState("One Piece");
     const [showCloseSizeCalculator, setShowCloseSizeCalculator] = useState(false);
-    return (
+    return (   
         <div className="Customizer">
+            <OnePieceProvider>
+            <TopProvider>
+            <PantyProvider>
             <img className="Customizer__Snail" src={Snail} alt="Snail"/>
             <img className="Customizer__Coconut" src={Coconut} alt="Coconut"/>
             <img className="Customizer__Float" src={Float} alt="Float"/>
@@ -48,22 +56,25 @@ const Customizer = (props) => {
                     </> : 
                     null}
                 </div>
-                {/* <div> 
-                    <div className="Customizer__Save"><FontAwesomeIcon icon={faHeart} /> &nbsp; Guardar en mi Closet</div>
+                <br/>
+                <div> 
+                    {/* <div className="Customizer__Save"><FontAwesomeIcon icon={faHeart} /> &nbsp; Guardar en mi Closet</div> */}
                     <div className="Customizer__Design"><img className="Customizer__Hook" src={Hook} alt="Gancho" /> &nbsp; Crear un nuevo diseño</div>
                     <div className="Customizer__Contact"><img className="Customizer__Question" src={Question} alt="Escríbenos" /> &nbsp; ¿Tienes dudas? Escríbenos</div>
-                </div> */}
+                </div>
             </div>
-            {mode === "Bikini" && <Bikini/>}
+            {mode === "Bikini" && <Bikini piece={piece} setPiece={setPiece}/>}
             {mode === "One Piece" && <OnePiece/>}
             {mode === "Sarong" && <Sarong/>}
-            <PreCheckout/>
             <div className="Customizer__Advice">
             <h2>Recuerda</h2>
             <h3 className="Customizer__Advice-Text">Puedes comprar una prenda o el conjunto completo</h3>
             </div>
+            <PreCheckout mode={mode} piece={piece}/>
+            </PantyProvider>
+            </TopProvider>
+            </OnePieceProvider>
         </div>
-
     );
 }
 

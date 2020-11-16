@@ -1,7 +1,7 @@
 import React from 'react';
 import './BikiniPanty.css'
 
-const BikiniPanty = ({pantyModel, setPantyModel, sizeModel, setSizeModel, setPantyColor, setPantyPrice, pantyPrice, pantys}) => {
+const BikiniPanty = ({pantyModel, setPantyModel, sizeModel, setSizeModel, setPantyColor, pantys}) => {
     return (
         <div className="BikiniPanty">
                <h2 className="BikiniPanty__Title">2.Modelo</h2>
@@ -62,19 +62,6 @@ const BikiniPanty = ({pantyModel, setPantyModel, sizeModel, setSizeModel, setPan
                 ))
                }
                </div>
-               {
-                    pantys.map( (panty) => (  
-                        (pantyModel === panty.reference) ?
-                            panty.tallas.map((options) => (
-                                (options.talla === sizeModel) ?
-                                    setPantyPrice(options.precio)
-                                :
-                                null
-                            ))
-                        :
-                            null
-                    ))
-                }
         </div>
     );
 }

@@ -2,6 +2,7 @@ import axios from "axios";
 axios.defaults.baseURL = 'http://issadu.com/web/client/';
 axios.defaults.headers.get['Content-Type'] ='application/json;charset=utf-8';
 axios.defaults.headers.get['Access-Control-Allow-Origin'] = '*';
+axios.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded"
 
 const APIService = {
     async getCloth(typeOfCloth) {
@@ -11,7 +12,45 @@ const APIService = {
     async getBestSellers() {
         let response = await axios.get(`cloth/bet-seller`);
         return response.data.data
-     }
+    },
+    async postUser(userInformation) {       
+       if (userInformation) {
+         const userInformationURLEncoded = this.jsonToURLEncoded(userInformation)
+         return axios.post(`auth/register`, userInformationURLEncoded)
+       }
+       return axios.post(`auth/register`)
+    },
+    async postShipping(shippingInformation) {
+      /*
+      shippingInformation = {
+         address: "Calle Falsa 123",
+         city: "Cali"
+         province: "Valle del Cauca",
+         country: "Colombia"
+      }
+      */
+     if (shippingInformation) {
+      const shippingInformationURLEncoded = this.jsonToURLEncoded(shippingInformation)
+      return axios.post(`shipping/create`, shippingInformationURLEncoded)
+      }
+    return axios.post(`shipping/create`)
+   },
+   async postInvoice(invoiceInformation) {
+     if (invoiceInformation) {
+      const invoiceInformationURLEncoded = this.jsonToURLEncoded(invoiceInformation)
+      return axios.post(`invoice/create`, invoiceInformationURLEncoded)
+      }
+    return axios.post(`invoice/create`)
+   },
+   jsonToURLEncoded(jsonString) {
+      return Object.keys(jsonString)
+        .map(function(key) {
+          return (
+            encodeURIComponent(key) + '=' + encodeURIComponent(jsonString[key])
+          )
+        })
+        .join('&')
+    }
 }
 
 export default APIService

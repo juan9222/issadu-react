@@ -3,14 +3,27 @@
   z-index: 4;
   transform: translate(91vw,3vw);
   width: 3vw;
+  height: 3vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
   background: white;
   border-radius: 5vw;
-  padding: 1vw 1vw;
+  padding: 2.5vw 2.5vw;
+  margin: 1vw 1vw;
+  box-sizing: border-box;
+}
+
+a {
+  margin: -0.3vw 0.1vw -0.1vw 0;
 }
 
 .svg-inline--fa {
   color: #3F414C;
+}
+.svg-inline--fa.fa-w-18 {
+  width: 3vw;
 }
 
 .ShoppingCart__Buy {

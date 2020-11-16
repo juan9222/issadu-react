@@ -1,15 +1,15 @@
 .PreCheckout {
     padding: 5vw 0vw;
-    width: 50vw;
-    margin: 0vw 0vw 0vw 50vw;
+    width: 54vw;
+    margin: 0vw 0vw 0vw 45vw;
   }
 
 .Bikini__Flex-Checkout {
     display: flex;
     justify-content: space-between;
     position: relative;
-    width: 50vw;
-    padding: 2vw 5vw 0vw 0vw;
+    width: 54vw;
+    padding: 2vw 0vw 0vw 0vw;
     box-sizing: border-box;
 }
 
@@ -19,9 +19,16 @@
 }
 
 .Bikini__Subtotal-Title {
-    font-size: 1vw;
-    font-family: "Muli";
+    font-size: 3vw;
+    font-family: "Anton";
     color: #00AEEF;
+}
+
+.Precheckout__Description {
+    font-family: "Muli";
+    font-size: 1.2vw;
+    color: #3F414C;
+    margin: 0.3vw 0vw;
 }
 
 .Bikini__Send {
@@ -35,7 +42,7 @@
 }
 
 .Bikini__Total {
-    font-size: 1.7vw;
+    font-size: 2vw;
     font-family: "Muli";
     color: #00AEEF;
 }
@@ -45,7 +52,7 @@
     color: #FFFFFF;
     border-radius: 100vw;
     text-align: center;
-    padding: 1vw 0vw;
+    padding: 1vw 2vw;
     width: auto;
     font-family: "Muli";
     font-size: 2vw;
@@ -54,8 +61,40 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    text-decoration: none;
+  }
+    a:-webkit-any-link {
+        text-decoration: none;
+    }
+  .PreCheckout__Button {
+    background: #00AEEF;
+    color: #FFFFFF;
+    border-radius: 100vw;
+    text-align: center;
+    padding: 0.6vw 1vw;
+    width: auto;
+    font-family: "Muli";
+    font-size: 1.2vw;
+    margin: 1vw 1vw;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
+  .Precheckout__HR {
+    width: 17vw;
+    border-style: solid;
+  }
+
+  .PreCheckout__Flex{
+      display: flex;
+  }
+
+  .Precheckout__Column{
+    display: flex;
+    flex-direction: column;
+  }
 .Bikini__Payment {
     color: #00AEEF;
     font-size: 1vw;
@@ -68,7 +107,7 @@
 }
 
 .Bikini__HR {
-    width: 45vw;
+    width: 54vw;
     height: 0.1vw;
     border-style: none;
     background: #3F414C;

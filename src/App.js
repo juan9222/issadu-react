@@ -14,42 +14,44 @@ import Checkout from './pages/Checkout/Checkout.js'
 import Contact from "./pages/Contact/Contact"
 import FallInLove from "./pages/FallInLove/FallInLove.js"
 import Legal from "./pages/Legal/Legal.js"
-
+import CartProvider from "./context/CartContext.js"
 
 function App() {
   return (
     <Provider store={store}>
-      <Router>
-      <div className="App">
-      <Navbar />
-      <ShoppingCart />
-          <Switch> 
-          <Route exact path="/"> 
-              <Home />
-            </Route>
-            <Route exact path="/best-sellers"> 
-              <BestSellersPage />
-            </Route>
-            <Route exact path="/cart"> 
-              <Cart />
-            </Route>
-            <Route exact path="/checkout"> 
-              <Checkout />
-            </Route>
-            <Route exact path="/contact"> 
-              <Contact />
-            </Route>
-            <Route exact path="/fall"> 
-              <FallInLove />
-            </Route>
-            <Route exact path="/legal"> 
-              <Legal />
-            </Route>
-            <Route exact path="/customizer" component={Customizer}></Route>
-          </Switch>
-      </div>
-      <Footer/>
-      </Router>
+      <CartProvider>
+        <Router>
+            <div className="App">
+            <Navbar />
+            <ShoppingCart />
+                <Switch> 
+                  <Route exact path="/"> 
+                    <Home />
+                  </Route>
+                  <Route exact path="/best-sellers"> 
+                    <BestSellersPage />
+                  </Route>
+                  <Route exact path="/cart"> 
+                    <Cart />
+                  </Route>
+                  <Route exact path="/checkout"> 
+                    <Checkout />
+                  </Route>
+                  <Route exact path="/contact"> 
+                    <Contact />
+                  </Route>
+                  <Route exact path="/fall"> 
+                    <FallInLove />
+                  </Route>
+                  <Route exact path="/legal"> 
+                    <Legal />
+                  </Route>
+                  <Route exact path="/customizer" component={Customizer}></Route>
+                </Switch>
+            </div>
+          <Footer/>
+        </Router>
+      </CartProvider>
     </Provider>
   );
 }

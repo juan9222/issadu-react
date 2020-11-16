@@ -48,13 +48,31 @@
 .Checkout__Flex {
     display: flex;
     width: 35vw;
+    justify-content: space-between;
 }
 
 .Checkout__CC {
     width: 35vw;
 }
 
+.Checkout__Error{
+    font-family: "Muli";
+    color: #ec524b
+}
+
 .Checkout_Location {
+    margin-right: 1vw;
+}
+
+.Checkout__Email-Parent {
+    margin-bottom: 1.6vw;
+  }
+.Checkout__Country {
+    width: 13vw;
+    margin-right: 1vw;
+  }
+.Checkout__Province {
+    width: 13vw;
     margin-right: 1vw;
 }
 
@@ -74,3 +92,6 @@
   color: #FFFFFF;
 }
 
+.Checkout__Phone {
+    margin-bottom: 2vw;
+  }

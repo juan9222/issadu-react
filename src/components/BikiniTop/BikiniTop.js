@@ -1,7 +1,7 @@
 import React from 'react'
 import './BikiniTop.css'
 
-const BikiniTop = ({topModel, setTopModel, sizeModel, setSizeModel, setTopColor, tops, topPrice, setTopPrice}) => {       
+const BikiniTop = ({topModel, setTopModel, sizeModel, setSizeModel, setTopColor, tops}) => {       
     return (
         <div className="BikiniTop">
                <h2 className="BikiniTop__Title">2.Modelo</h2>
@@ -36,7 +36,7 @@ const BikiniTop = ({topModel, setTopModel, sizeModel, setSizeModel, setTopColor,
                 }
                </div>
                {/*Colores*/}
-               <h2 className="BikiniPanty__Title">3.Diseño</h2>
+               <h2 className="BikiniPanty__Title">4.Diseño</h2>
                <h2 className="Bikini__Titles">Colores sólidos</h2>
                <div className="Bikini__Flex"> 
                {
@@ -64,19 +64,6 @@ const BikiniTop = ({topModel, setTopModel, sizeModel, setSizeModel, setTopColor,
                 ))
                }
                </div>
-               {
-                    tops.map( (top) => (  
-                        (topModel === top.reference) ?
-                            top.tallas.map((options,index) => (
-                                (options.talla === sizeModel) ?
-                                    setTopPrice(options.precio)
-                                :
-                                null
-                            ))
-                        :
-                            null
-                    ))
-                }
         </div>
     );
 }
