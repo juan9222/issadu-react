@@ -1,6 +1,7 @@
 {
-  "name": "issadu-react",
+  "name": "issadu",
   "version": "0.1.0",
+  "homepage": "https://issadu.com/",
   "private": true,
   "proxy": "http://issadu.com/web/client/",
   "dependencies": {

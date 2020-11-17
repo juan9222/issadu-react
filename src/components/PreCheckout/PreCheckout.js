@@ -1,4 +1,4 @@
-import React, {useContext,useState, useCallback,useRef,useEffect} from 'react';
+import React, {useContext} from 'react';
 import {OnePieceContext} from '../../context/OnePieceContext.js'
 import {TopContext} from '../../context/TopContext.js'
 import {PantyContext} from '../../context/PantyContext.js'
@@ -10,38 +10,34 @@ import './PreCheckout.css'
 
 
 const PreCheckout = ({mode, piece}) => {
-    const {onePieceObject, storeOnePieceObject} = useContext(OnePieceContext);
-    const {topObject, storeTopObject} = useContext(TopContext);
-    const {pantyObject, storePantyObject} = useContext(PantyContext);
+    const {onePieceObject} = useContext(OnePieceContext);
+    const {topObject} = useContext(TopContext);
+    const {pantyObject} = useContext(PantyContext);
     const {cart,storeClothToCart} = useContext(CartContext);
-
+    
     const addToCart = (id,clothType, clothSubType) => {
         if (clothType === "Bikini" && clothSubType === "Top") {
-            storeTopObject(previousTop => {
-                return { ...previousTop, id: id , quantity: 1 };
-            })
+            let newTopObject = null
+            newTopObject = { ...topObject, id: id , quantity: 1 };            
             storeClothToCart(oldCart => [
                 ...oldCart,
-                topObject,
+                newTopObject,
             ])
-            console.log(topObject, "topObject dentro de addToCart")
         }
         if (clothType === "Bikini" && clothSubType === "Panty") {
-            storePantyObject(previousPanty => {
-                return { ...previousPanty, id: id , quantity: 1 };
-            })
+            let newPantyObject = null
+            newPantyObject = { ...pantyObject, id: id , quantity: 1 };  
             storeClothToCart(oldCart => [
                 ...oldCart,
-                pantyObject,
+                newPantyObject,
             ])
         }
         if (clothType === "One Piece") {
-            storeOnePieceObject(previousOnePiece => {
-                return { ...previousOnePiece, id: id , quantity: 1 };
-            })
+            let newOnePieceObject = null
+            newOnePieceObject = { ...onePieceObject, id: id , quantity: 1 }; 
             storeClothToCart(oldCart => [
                 ...oldCart,
-                onePieceObject,
+                newOnePieceObject,
             ])
         }
     }

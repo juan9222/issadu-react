@@ -11,6 +11,16 @@ const APIService = {
     },
     async getBestSellers() {
         let response = await axios.get(`cloth/bet-seller`);
+        let bestSwimsuits = response.data.data
+        // eslint-disable-next-line
+        bestSwimsuits.map(element => {
+          if (element.cloth_two === null) {
+              element.cloth_two = " "
+          }
+          if (element.color_two === null) {
+            element.color_two = " "
+        }
+        })
         return response.data.data
     },
     async postUser(userInformation) {       

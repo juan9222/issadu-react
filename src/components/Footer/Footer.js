@@ -14,14 +14,15 @@ const Footer = props => {
             <img className="Footer__Logo" alt="Footer Logo" src={FooterLogo} />
             </Link>
             <div className="Footer__Socials"> 
-                <a href="https://web.whatsapp.com/"><img className="Footer__Whatsapp" src={Whatsapp} alt="Whatsapp"  /></a>
+                <a href="https://web.whatsapp.com/send?l=es&phone=573044529259"><img className="Footer__Whatsapp" src={Whatsapp} alt="Whatsapp"  /></a>
                 <a href="https://www.facebook.com/"><img className="Footer__Facebook" src={Facebook} alt="Facebook" /></a>
                 <a href="https://www.instagram.com/"><img className="Footer__Instagram" src={Instagram} alt="Instagram" /></a>
                 <a href="https://co.pinterest.com/"><img className="Footer__Pinterest" src={Pinterest} alt="Pinterest" /></a>
             </div>
             <div className="Footer__Service">
                 <h3 className="Footer__Service-Title">SERVICIO AL CLIENTE: </h3>
-                <Link className="Footer__Links" to="/contact">&nbsp;&nbsp;CONTÁCTANOS&nbsp;&nbsp;|&nbsp;</Link>
+                <a className="Footer__Links" href="https://web.whatsapp.com/send?l=es&phone=573044529259">&nbsp;CONTACTANOS&nbsp;|</a>
+                <Link className="Footer__Links" to="/contact">&nbsp;&nbsp;SOBRE NOSOTRAS&nbsp;&nbsp;|&nbsp;</Link>
                 {/* <Link className="Footer__Links" to="/contact">&nbsp;TARIFAS DE ENVÍO&nbsp;&nbsp;|&nbsp;</Link> */}
                 <Link className="Footer__Links" to="/legal">&nbsp; ACUERDOS DE DEVOLUCIÓN</Link>
             </div>

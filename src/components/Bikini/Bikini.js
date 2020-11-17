@@ -10,14 +10,16 @@ import './Bikini.css'
 import BikiniTop from '../BikiniTop/BikiniTop.js'
 import BikiniPanty from '../BikiniPanty/BikiniPanty.js'
 
-const Bikini = ({piece,setPiece}) => {
+const Bikini = ({piece,setPiece,cloth1ref = "Daniela",cloth1color = "IP020",cloth2ref = "Carolina",cloth2color = "IP020"}) => {
     const [tops, setTops] = useState([]) 
     const [pantys, setPantys] = useState([]) 
-    const [topColor, setTopColor] = useState("IP020")
+    const [topProductId, setTopProductId] = useState(0)
+    const [pantyProductId, setPantyProductId] = useState(0)
+    const [topColor, setTopColor] = useState(cloth1color)
     const [sizeModel, setSizeModel] = useState("S")
-    const [topModel, setTopModel] = useState("Daniela")
-    const [pantyModel, setPantyModel] = useState("Carolina")
-    const [pantyColor, setPantyColor] = useState("IP020")
+    const [topModel, setTopModel] = useState(cloth1ref)
+    const [pantyModel, setPantyModel] = useState(cloth2ref)
+    const [pantyColor, setPantyColor] = useState(cloth2color)
     const [topPrice, setTopPrice] = useState(0)
     const [topPriceDiscount, setTopPriceDiscount] = useState(0)
     const [pantyPrice, setPantyPrice] = useState(0)
@@ -40,6 +42,7 @@ const Bikini = ({piece,setPiece}) => {
                 panty.tallas.map((options) => (
                     (options.talla === sizeModel) ?
                         (setPantyPrice(options.precio),
+                        setPantyProductId(panty.id),
                         setPantyPriceDiscount(Math.floor(options.precio*(1-(1*0.01*options.descuento)))))
                     :
                     null
@@ -52,6 +55,7 @@ const Bikini = ({piece,setPiece}) => {
                 top.tallas.map((options) => (
                     (options.talla === sizeModel) ?
                         (setTopPrice(options.precio),
+                        setTopProductId(top.id),
                         setTopPriceDiscount(Math.floor(options.precio*(1-(1*0.01*options.descuento)))))
                     :
                     null
@@ -63,6 +67,7 @@ const Bikini = ({piece,setPiece}) => {
     const buildTopObject = useCallback(()=>{
         let top = {
             type: "Top",
+            productId: topProductId,
             model: topModel,
             size: sizeModel,
             color: topColor,
@@ -72,10 +77,11 @@ const Bikini = ({piece,setPiece}) => {
             quantity: 0
         }
         storeTopObject(top)
-    },[sizeModel,topColor,topModel,topPrice,topPriceDiscount,storeTopObject])
+    },[topProductId,sizeModel,topColor,topModel,topPrice,topPriceDiscount,storeTopObject])
     const buildPantyObject = useCallback(()=>{
         let panty = {
             type: "Panty",
+            productId: pantyProductId,
             model: pantyModel,
             size: sizeModel,
             color: pantyColor,
@@ -85,7 +91,7 @@ const Bikini = ({piece,setPiece}) => {
             quantity: 0
         }
         storePantyObject(panty)
-    },[pantyColor,pantyModel,pantyPrice,pantyPriceDiscount,sizeModel,storePantyObject])
+    },[pantyProductId,pantyColor,pantyModel,pantyPrice,pantyPriceDiscount,sizeModel,storePantyObject])
     useEffect(() => {
         if (isInitialMount.current) {
             getTops();

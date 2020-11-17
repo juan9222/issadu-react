@@ -3,10 +3,11 @@ import APIService from '../../services/APIService.js'
 import {OnePieceContext} from '../../context/OnePieceContext.js'
 import './OnePiece.css'
 
-const OnePiece = () => {
+const OnePiece = ({cloth1ref="Carmen",cloth1color="IP020"}) => {
     const [onePieces, setOnePieces] = useState([])
-    const [onePieceModel, setOnePieceModel] = useState("Carmen")
-    const [onePieceColor, setOnePieceColor] = useState("IP020")
+    const [onePieceProductId, setOnePieceProductId] = useState(0)
+    const [onePieceModel, setOnePieceModel] = useState(cloth1ref)
+    const [onePieceColor, setOnePieceColor] = useState(cloth1color)
     const [sizeModel, setSizeModel] = useState("S")
     const [onePiecePrice, setOnePiecePrice] = useState(0)
     const [onePieceDiscountedPrice, setOnePieceDiscountedPrice] = useState(0)
@@ -22,6 +23,7 @@ const OnePiece = () => {
             onePiece.tallas.map((options) => (
                 (sizeModel === options.talla) ?
                 (setOnePiecePrice(options.precio),
+                setOnePieceProductId(onePiece.id),
                 setOnePieceDiscountedPrice(Math.floor(options.precio*(1-(1*0.01*options.descuento)))))
                 :
                 null
@@ -33,6 +35,7 @@ const OnePiece = () => {
     const buildOnePieceObject =  useCallback(() => {
         let onePiece = {
             type: "Enterizo",
+            productId: onePieceProductId,
             model: onePieceModel,
             size: sizeModel,
             color: onePieceColor,
@@ -42,7 +45,7 @@ const OnePiece = () => {
             quantity: 0
         }
         storeOnePieceObject(onePiece)
-      },[onePieceColor,onePieceDiscountedPrice,onePieceModel,onePiecePrice,sizeModel,storeOnePieceObject])
+      },[onePieceProductId,onePieceColor,onePieceDiscountedPrice,onePieceModel,onePiecePrice,sizeModel,storeOnePieceObject])
     useEffect(() => {
         if (isInitialMount.current) {
             getOnePieces();

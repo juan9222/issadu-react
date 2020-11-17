@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import Bikini from '../../components/Bikini/Bikini.js'
 import OnePiece from '../../components/OnePiece/OnePiece.js'
 import Sarong from '../../components/Sarong/Sarong.js'
@@ -20,10 +20,26 @@ import './Customizer.css'
 
 const Customizer = (props) => {
     const bikiniOrOnePiece = props.location.state.bikiniOrOnePiece;
+    const cloth1type = props.location.state.cloth1type;
+    const cloth1ref = props.location.state.cloth1ref;
+    const cloth1color = props.location.state.cloth1color;
+    const cloth2type = props.location.state.cloth2type;
+    const cloth2ref = props.location.state.cloth2ref;
+    const cloth2color = props.location.state.cloth2color;
     const [mode, setMode] = useState(bikiniOrOnePiece);
     const [piece, setPiece] = useState("Top")
-    // const [mode, setMode] = useState("One Piece");
     const [showCloseSizeCalculator, setShowCloseSizeCalculator] = useState(false);
+
+    useEffect(() => {
+        if (bikiniOrOnePiece === "Una Pieza") {
+            setMode("One Piece")
+        }
+        if (bikiniOrOnePiece === "Top" || bikiniOrOnePiece === "Panty" ) {
+            setMode("Bikini")
+            setPiece("Top")
+        }
+        // eslint-disable-next-line 
+    }, [])
     return (   
         <div className="Customizer">
             <OnePieceProvider>
@@ -60,12 +76,12 @@ const Customizer = (props) => {
                 <div> 
                     {/* <div className="Customizer__Save"><FontAwesomeIcon icon={faHeart} /> &nbsp; Guardar en mi Closet</div> */}
                     <div className="Customizer__Design"><img className="Customizer__Hook" src={Hook} alt="Gancho" /> &nbsp; Crear un nuevo diseño</div>
-                    <div className="Customizer__Contact"><img className="Customizer__Question" src={Question} alt="Escríbenos" /> &nbsp; ¿Tienes dudas? Escríbenos</div>
+                    <a href="https://web.whatsapp.com/send?l=es&phone=573044529259" className="Customizer__Contact"><img className="Customizer__Question" src={Question} alt="Escríbenos" /> &nbsp; ¿Tienes dudas? Escríbenos</a>
                 </div>
             </div>
-            {mode === "Bikini" && <Bikini piece={piece} setPiece={setPiece}/>}
-            {mode === "One Piece" && <OnePiece/>}
-            {mode === "Sarong" && <Sarong/>}
+            {mode === "Bikini" && <Bikini  cloth1type={cloth1type} cloth1ref={cloth1ref} cloth1color={cloth1color} cloth2type={cloth2type} cloth2ref={cloth2ref} cloth2color={cloth2color} piece={piece} setPiece={setPiece}/>}
+            {mode === "One Piece" && <OnePiece  cloth1type={cloth1type} cloth1ref={cloth1ref} cloth1color={cloth1color}/>}
+            {mode === "Sarong" && <Sarong cloth1type={cloth1type} cloth1ref={cloth1ref} cloth1color={cloth1color}/>}
             <div className="Customizer__Advice">
             <h2>Recuerda</h2>
             <h3 className="Customizer__Advice-Text">Puedes comprar una prenda o el conjunto completo</h3>

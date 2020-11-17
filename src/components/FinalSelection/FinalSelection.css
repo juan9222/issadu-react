@@ -26,6 +26,8 @@
 
 .FinalSelection__Item-Price {
     font-size: 1.5vw;
+    width: 13vw;
+    text-align: right;
 }
 
 .FinalSelection__Flex {
