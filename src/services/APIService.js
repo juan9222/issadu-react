@@ -1,5 +1,5 @@
 import axios from "axios";
-axios.defaults.baseURL = 'http://issadu.com/web/client/';
+axios.defaults.baseURL = 'https://issadu.com/web/client/';
 axios.defaults.headers.get['Content-Type'] ='application/json;charset=utf-8';
 axios.defaults.headers.get['Access-Control-Allow-Origin'] = '*';
 axios.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded"
