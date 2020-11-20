@@ -12,7 +12,7 @@ const Checkout = () => {
     const [amount, setAmount] = useState(0)
     const [orderId, setOrderId] = useState("")
     const [signature, setSignature] = useState("")
-
+    
     const validate = values => {
         const errors = {};
         if (!values.firstName) {
@@ -72,7 +72,6 @@ const Checkout = () => {
            } 
            let postUserResponse = await APIService.postUser(userInformation)
            let userId = postUserResponse.data.data
-
            const shippingInformation = {
                 address: address1+" "+address2,
                 city: city,
@@ -85,8 +84,9 @@ const Checkout = () => {
             let  invoiceInformation = {
                 user_id: userId,
                 coupon_id: null,
-                // shippingType: shippingType,
+                province: province,
                 shipping_id: shippingId,
+                isRegisteredUser: true,
                 items: JSON.stringify(cart)
             }
             let postInvoiceResponse = await APIService.postInvoice(invoiceInformation);
@@ -99,10 +99,7 @@ const Checkout = () => {
             document.getElementById("paymentButton").submit();
         }
       })
-
-
-
-    return (
+      return (
         <div className="Checkout">
             <div className="Checkout__Separator">
             <form id="mainForm" onSubmit={formik.handleSubmit}>
@@ -200,9 +197,9 @@ const Checkout = () => {
                 </form>
             </div>
             <div type="hidden" id="formPayU">
-            <form target="_blank" id="paymentButton" method="post" onSubmit={formik.handleSubmit} action="https://sandbox.checkout.payulatam.com/ppp-web-gateway-payu/">
-                <input form="paymentButton" name="merchantId"    type="hidden"  value="508029"/>
-                <input form="paymentButton" name="accountId"     type="hidden"  value="512321"/>
+            <form target="_blank" id="paymentButton" method="post" onSubmit={formik.handleSubmit} action="https://checkout.payulatam.com/ppp-web-gateway-payu/">
+                <input form="paymentButton" name="merchantId"    type="hidden"  value="895746"/>
+                <input form="paymentButton" name="accountId"     type="hidden"  value="902333"/>
                 <input form="paymentButton" name="description"   type="hidden"  value="COMPRAS EN ISSADU.COM"/>
                 <input form="paymentButton" name="referenceCode" type="hidden"  value={orderId}/>
                 <input form="paymentButton" name="amount"        type="hidden"  value={amount}/>
@@ -210,14 +207,14 @@ const Checkout = () => {
                 <input form="paymentButton" name="taxReturnBase" type="hidden"  value="0"/>
                 <input form="paymentButton" name="currency"      type="hidden"  value="COP"/>
                 <input form="paymentButton" name="signature"     type="hidden"  value={signature}/>
-                <input form="paymentButton" name="test"          type="hidden"  value="1"/>
-                <input form="paymentButton" name="buyerEmail"    type="hidden"  value=""/>
-                <input form="paymentButton" name="responseUrl"    type="hidden"  value="https://issadu.com./web/payu/confirmation"/>
-                <input form="paymentButton" name="confirmationUrl"    type="hidden"  value="https://issadu.com./web/payu/confirmation"/>
-                {/* <input form="paymentButton" name="SubmitPay" type="submit"/> */}
+                <input form="paymentButton" name="test"          type="hidden"  value="0"/>
+                <input form="paymentButton" name="buyerEmail"    type="hidden"  value={formik.values.email}/>
+                <input form="paymentButton" name="responseUrl"    type="hidden"  value="https://www.issadu.com/web/site/confirmation"/>
+                <input form="paymentButton" name="confirmationUrl"    type="hidden"  value="https://www.issadu.com/web/site/confirmation"/>
+                <input className="hide" form="paymentButton" name="SubmitPay" type="submit"/>
             </form>
             </div>
-            <FinalSelection/>
+            <FinalSelection province={formik.values.province}/>
         </div>
     )
 }

@@ -45,6 +45,10 @@ const APIService = {
       }
     return axios.post(`shipping/create`)
    },
+   async getShippingPrices () {
+    let response = await axios.get(`shipping/prices`);
+    return response.data.data
+   },
    async postInvoice(invoiceInformation) {
      if (invoiceInformation) {
       const invoiceInformationURLEncoded = this.jsonToURLEncoded(invoiceInformation)

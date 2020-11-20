@@ -10,6 +10,9 @@
     height: 10vw;
     margin: 0vw 0vw 2vw 0vw;
 }
+.hide{
+    display: none;
+}
 
 .Checkout__Input{
     border: 1px transparent solid;

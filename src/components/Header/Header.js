@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react'
-import Background from '../../assets/Header/background.gif'
+import Background from '../../assets/Header/background.png'
 import Models from '../../assets/Header/models.png'
 import Logo from '../../assets/Header/Issadun-logo.png'
 import RightArrow from '../../assets/Header/right-arrow.png'
