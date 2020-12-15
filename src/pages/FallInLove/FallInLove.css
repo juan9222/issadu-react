@@ -18,3 +18,17 @@
     color: #3F414C;
     width: 45vw;
   }
+
+  @media screen and (max-width: 780px) {
+    .FallInLove__Title {
+      font-family: "Anton", sans-serif;
+      font-size: 12vw;
+   }  
+   .FallInLove__Description {
+    font-size: 7vw;
+    width: 85vw;
+   }
+   .FallInLove {
+    padding: 27.2vw 7vw;
+   }
+  }

@@ -1,10 +1,10 @@
 .BestSellers {
-    position: absolute;
+    position: relative;
     display: flex;
     z-index: 5;
-    transform: translate(0vw,56.4vw);
+    transform: translate(0vw,0vw);
     width: 100vw;
-    height: 140.6vw;
+    height: 130vw;
 }
 
 .BestSellers__Title {
@@ -13,6 +13,7 @@
     color: #00AEEF;
     transform: translate(22vw,5vw);
     width: 70vw;
+    height: 6vw;
   }
 
 .BestSellers__Sellers {
@@ -24,3 +25,20 @@
     width: 10vw;
     transform: translate(11vw, 0vw);
 }
+
+
+
+@media screen and (max-width: 780px) {
+    .BestSellers{
+      transform: translate(0vw, 0vw);
+      height: 1125vw;
+      }
+      .BestSellers__Title {
+        font-size: 9vw;
+      } 
+      .BestSellers__Image {
+        width: 14vw;
+        transform: translate(3vw, -2vw);
+      }
+}
+  

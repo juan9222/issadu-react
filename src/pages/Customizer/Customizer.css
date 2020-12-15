@@ -152,3 +152,77 @@
     width: 8vw;
     margin: -6vw -3vw -5vw -2vw;
 }
+
+
+
+@media screen and (max-width: 780px) {
+    .Customizer__Snail {
+        display: none;
+    }
+    .Customizer__Float {
+        display: none;
+    }
+    .Customizer__Coconut {
+        display: none;
+    }
+    .Customizer__Palm {
+        display: none;
+    }
+    .Customizer__Contact {
+        font-size: 2.3vw;
+        width: 22.1vw;
+        line-height: 4vw;
+        padding: 0vw 1vw;
+        margin-top: 6vw;
+    }
+    .Customizer__Design {
+        font-size: 2.3vw;
+        width: 22.1vw;
+        padding: 0vw 1vw;
+    }
+    .Customizer__Closet {
+        transform: translate(1vw, 25.6vw);
+        z-index: 8;
+    }
+    .Customizer__Hook {
+        width: 1.4vw;
+        cursor: pointer;
+        margin-top: 0vw;
+        margin-left: 0vw;
+        margin-right: 3vw;      
+    }
+    .Customizer__One {
+        font-size: 3.3vw;
+        width: 21vw;
+        padding: 2vw 1vw;
+    }
+    .Customizer__Question {
+        width: 3.4vw;
+        cursor: pointer;
+        margin-top: -4vw;
+    }
+    .Customizer__Verify-Sizes {
+        transform: translate(1vw, 67.6vw);
+        z-index: 8;
+        border-radius: 1vw;
+        padding: 2vw 1vw;
+    }
+    .Customizer__Star {
+        display: none;
+    }
+    .Customizer__Verify-Label {
+        width: 21vw;
+        font-size: 2.8vw;
+    }
+    .Customizer__Advice {
+        font-size: 5vw;
+        margin: -26vw 0vw 0vw 4vw;
+    }
+    .Customizer__Advice-Text {
+        margin-top: 1.7vw;
+        line-height: 4vw;
+        font-size: 3vw;
+        width: 19vw;
+    }
+
+}

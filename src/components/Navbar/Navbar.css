@@ -91,3 +91,40 @@
     width: 13vw;
     box-sizing: border-box;
   }
+
+@media screen and (max-width: 780px) {
+    .Navbar__Background {
+        width: 100vw;
+    }
+    .Navbar__LogoMenu {
+        width: 63vw;
+    }
+    .Navbar__Close {
+        width: 10vw;
+    }
+    .Navbar__Flex-Right {
+        width: 88vw;
+    }
+    .Navbar__Text {
+        font-size: 8.5vw;
+    }
+    .Navbar__Column {
+        width: 80vw;
+        height: 115vw;
+    }
+    .Navbar__Whatsapp {
+        width: 15vw;
+    }
+    .Navbar__Instagram {
+        width: 15vw;
+    }
+    .Navbar__Facebook {
+        width: 15vw;
+    }
+    .Navbar__Pinterest {
+        width: 15vw;
+    }
+    .Navbar__Flex-Socials {
+        width: 82vw;
+    }      
+}

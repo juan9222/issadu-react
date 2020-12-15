@@ -33,3 +33,18 @@ a {
   padding: 1vw 2vw;
   border-radius: 2vw;
 }
+
+@media screen and (max-width: 780px) {
+  .ShoppingCart {
+    position: fixed;
+    transform: translate(81vw,3vw);
+    width: 15vw;
+    height: 15vw;
+    margin-bottom: -15vw;
+    border-radius: 100vw;
+    z-index: 6;
+  }
+  .svg-inline--fa.fa-w-18 {
+    width: 8vw;
+  }
+}

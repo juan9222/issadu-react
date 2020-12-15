@@ -1,3 +1,6 @@
+.Header {
+  height: 56.4vw;
+}
 .Header__Bikini{
     position: absolute;
     z-index: 3;
@@ -139,4 +142,78 @@
     margin-top: 0.4vw;
     width: 1vw;
     transform: rotate(180deg);
+  }
+
+  @media screen and (max-width: 780px) {
+    .Header {
+      height: 185vw;
+    }
+    .Header__Background {
+      position: relative;
+      height: 177.6vw;
+      object-fit: cover;
+      object-position: -158vw 0vw;
+    }
+    
+    .BestSellers {
+      transform: translate(0vw,0vw);
+    }
+    .Header__Models {
+      position: absolute;
+      width: 91vw;
+      transform: translate(-93vw,67vw);
+    }
+    .Header__Button-Bikini {
+      position: absolute;
+      transform: translate(6vw,-17vw);
+      padding: 2.5vw 4.7vw 2.5vw 4.7vw;
+      width: 53vw;
+      border-radius: 22vw;
+      font-size: 4vw;
+    }
+    .Header__Button-White {
+      width: 5.5vw;
+      height: 5.5vw;
+    }
+    .Header__Button-Right {
+      margin-left: 1.7vw;
+      margin-top: 1vw;
+      width: 2.2vw;
+    }
+    .Header__Title {
+      position: absolute;
+      font-size: 12.2vw;
+      line-height: 14vw;
+      transform: translate(23vw,-149vw);
+    }
+    .Header__Main-Logo {
+      position: absolute;
+      width: 48vw;
+      transform: translate(-76vw,1vw);
+    }
+    .Header__Button-OnePiece {
+      position: absolute;
+      transform: translate(29vw,-31vw);
+      padding: 2.5vw 4.7vw 2.5vw 4.7vw;
+      width: 60vw;
+      border-radius: 22vw;
+      font-size: 4vw;
+    }
+    .Header__Button-Left {
+      margin-left: 1.7vw;
+      margin-top: 1vw;
+      width: 2.2vw;
+    }
+    .Header__Subtitle {
+      display: none;
+    }
+    .Header__Bikini {
+      display: none;
+    }
+    .Header__One {
+      display: none;
+    }
+    .Navbar__Logo {
+      width: 20vw;
+    } 
   }

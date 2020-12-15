@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import Background from '../../assets/Header/background.png'
 import Models from '../../assets/Header/models.png'
-import Logo from '../../assets/Header/Issadun-logo.png'
+import Logo from '../../assets/Header/Issadun-logo.svg'
 import RightArrow from '../../assets/Header/right-arrow.png'
 import {Link} from 'react-router-dom'
 import ImgBikini from '../../assets/Header/build-bikini.png'
@@ -23,8 +23,8 @@ const Header = props => {
         return () => clearInterval(interval);
       }, []);
     return (
-            <div>
-            <img className="Header__Background" src={Background} alt="Mar sol arena Issadun vestidos de baño" />
+            <div className="Header">
+            <img className="Header__Background" src={Background} alt="Mar sol arena Issadun vestidos de baño"/>
             <img className="Header__Models" src={Models} alt="Modelos Enterizos y Bikinis" />
             <img className="Header__Models" src={Bikini3} alt="Modelos Enterizos y Bikinis" />
             <img className="Header__Models" src={OnePiece3} alt="Modelos Enterizos y Bikinis" />

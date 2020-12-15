@@ -62,3 +62,43 @@
     justify-content: space-between;
     align-items: center;
 }
+
+
+@media screen and (max-width: 780px) {
+    .Footer {
+        flex-direction: column;
+        align-items: center;
+    }
+    .Footer__Logo{
+        width: 33vw;
+    }
+    .Footer__Whatsapp {
+        width: 8vw;
+    }
+    .Footer__Facebook {
+        width: 8vw;
+    }
+    .Footer__Instagram {
+        width: 8vw;
+    }
+    .Footer__Pinterest {
+        width: 8vw;
+    }
+    .Footer__Socials {
+        width: 58.4vw;
+        margin: 5vw 0vw;
+    }
+    .Footer__Service {
+        flex-direction: column;
+    }
+    .Footer__Service-Title {
+        font-size: 5vw;
+    }
+    .Footer__Links {
+        font-size: 4vw;
+        margin: 4vw 0vw;
+    }
+    .Footer__Pipe {
+        display: none;
+    }
+}

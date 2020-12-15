@@ -11,11 +11,11 @@
     display: flex;
     font-family: "Muli";
     font-size: 1vw;
+    align-items: center;
     width: fit-content;
-    justify-content: space-between;
+    justify-content: flex-start;
     padding: 1vw 0vw;
     cursor: pointer;
-    align-items: center;
 }
 
 .BikiniTop__Title {
@@ -37,8 +37,13 @@
 
 .BikiniTop__Size {
     color: #3F414C;
-    font-size: 2vw;
-    margin: 0vw 1vw;
+    font-size: 1.6vw;
+    margin: 0vw 0.3vw;
+    width: 3vw;
+    height: 3vw;
+    padding: 1vw 1vw;
+    text-align: center;
+    line-height: 3vw;
   }
 
   .Bikini__Models {
@@ -47,10 +52,10 @@
 }
 
 .Bikini__Models--Selected {
-    border-radius: 100vw;
-    border-style: solid;
-    border-color: #00AEEF;
+    border: solid;
     border-width: 0.2vw;
+    border-radius: 100vw;
+    border-color: #00AEEF;
 }
 
 .BikiniTop__Size--Selected {
@@ -58,5 +63,54 @@
     border-style: solid;
     border-color: #00AEEF;
     border-width: 0.2vw;
-    padding: 0.4vw 0.8vw;
+}
+
+
+@media screen and (max-width: 780px) {
+    .BikiniTop__Title {
+        font-size: 3.4vw;
+    }
+    .BikiniTop__Sub {
+        font-size: 3vw;
+        width: 70vw;
+    }
+    .Bikini__Models {
+        width: 11vw;
+        margin: 0vw 0.7vw;
+      }
+    .Bikini__Models--Selected {
+        border: solid;
+        border-width: 0.8vw;
+        border-radius: 8vw;
+        border-color: #00AEEF;
+    }
+    .Bikini__Flex-Size {
+        width: 72vw !important;
+        flex-flow: wrap !important;
+        text-align: center;
+    }
+    .BikiniTop__Size {
+        color: #3F414C;
+        font-size: 5vw;
+        width: 11vw;
+        height: 11vw;
+        padding: 2vw 2vw;
+        line-height: 11vw;
+    }
+    .BikiniTop__Size--Selected {
+        border-width: 0.8vw;
+    }
+    .BikiniPanty__Title {
+        font-size: 3.4vw;
+    }      
+    .Bikini__Print {
+        width: 11vw;
+        height: 11vw;
+        margin: 1.2vw 1.2vw;
+    }
+    .Bikini__Print--Selected {
+        border: 0.8vw solid #00AEEF;
+        border-radius: 100vw;
+    }
+
 }

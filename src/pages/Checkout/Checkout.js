@@ -86,7 +86,7 @@ const Checkout = () => {
                 coupon_id: null,
                 province: province,
                 shipping_id: shippingId,
-                isRegisteredUser: true,
+                isRegisteredUser: false,
                 items: JSON.stringify(cart)
             }
             let postInvoiceResponse = await APIService.postInvoice(invoiceInformation);

@@ -26,6 +26,8 @@ export default function SizeCalculator({setShowCloseSizeCalculator}) {
             return "XL"
         } else if (sizes.bust >= 111 && sizes.bust <= 116) {
             return "XXL"
+        } else if (sizes.bust === "") {
+            return ""
         } else {
             return "-"
         }
@@ -43,6 +45,8 @@ export default function SizeCalculator({setShowCloseSizeCalculator}) {
             return "XL"
         } else if ((sizes.hip >= 89 && sizes.hip <= 94) && (sizes.waist >= 112 && sizes.waist <= 117)) {
             return "XXL"
+        } else if (sizes.hip === "" && sizes.waist === "" ) {
+            return ""
         } else {
             return "-"
         }
@@ -60,6 +64,8 @@ export default function SizeCalculator({setShowCloseSizeCalculator}) {
             return "XL"
         } else if ((sizes.bust >= 111 && sizes.bust <= 116) && (sizes.hip >= 84 && sizes.hip <= 88) && (sizes.waist >= 112 && sizes.waist <= 117)) {
             return "XXL"
+        } else if (sizes.bust === "" && sizes.hip  === "" && sizes.waist === "") {
+            return ""
         } else {
             return "-"
         }
@@ -78,33 +84,37 @@ export default function SizeCalculator({setShowCloseSizeCalculator}) {
                 <div className="SizeCalculator__Measure">
                     <div className="SizeCalculator__Column">
                         <div className="SizeCalculator__Row">
-                            <h3>Busto</h3>
+                            <h3 className="SizeCalculator__Text">Busto</h3>
                             <input name="bust" onChange={handleInputChange} className="SizeCalculator__Input" type="number" />
                         </div>
                         <div className="SizeCalculator__Row">
-                            <h3>Cadera</h3>
+                            <h3 className="SizeCalculator__Text">Cadera</h3>
                             <input name="hip" onChange={handleInputChange} className="SizeCalculator__Input" type="number" />
                         </div>
                         <div className="SizeCalculator__Row">
-                            <h3>Cintura</h3>
+                            <h3 className="SizeCalculator__Text">Cintura</h3>
                             <input name="waist" onChange={handleInputChange} className="SizeCalculator__Input" type="number" />
                         </div>
                     </div>
-                    <div>
+                    <div className="SizeCalculator__Column">
                         <div className="SizeCalculator__Row">
-                            <h3>TOP</h3>
+                            <h3 className="SizeCalculator__Text">TOP</h3>
                             <h3>{calculateTopSize()}</h3>
                         </div>
                         <div className="SizeCalculator__Row">
-                            <h3>PANTY</h3>
+                            <h3 className="SizeCalculator__Text">PANTY</h3>
                             <h3>{calculatePantySize()}</h3>
                         </div>
                         <div className="SizeCalculator__Row">
-                            <h3>ENTERIZO</h3>
+                            <h3 className="SizeCalculator__Text">ENTERIZO</h3>
                             <h3>{calculateOnePieceSize()}</h3>
                         </div>
-                    </div>
+                    </div>                    
                 </div>
+                { 
+                            (calculateTopSize() === "-" || calculatePantySize() === "-" || calculateOnePieceSize() === "-" ) && 
+                            <h3 className="SizeCalculator__Warning"> Lamentablemente, tus medidas no están soportadas en nuestro taller de manera estándar.</h3>
+                }
             </div>
         </div>
      </>

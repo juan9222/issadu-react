@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {useState, useRef, useEffect} from 'react';
+import APIService from './services/APIService.js'
 import {Provider} from 'react-redux'
 import {store} from './store/store'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
@@ -15,11 +16,44 @@ import Contact from "./pages/Contact/Contact"
 import FallInLove from "./pages/FallInLove/FallInLove.js"
 import Legal from "./pages/Legal/Legal.js"
 import CartProvider from "./context/CartContext.js"
+import Loader from "./components/Loader/Loader.js"
+
 
 function App() {
+  const isInitialMount = useRef(true);
+  const [isLoading, setIsLoading] = useState(true);
+  async function getBestSellerImages() {
+    let imageArray = []
+    let bestSellersURLs = await APIService.getBestSellers();
+    bestSellersURLs.forEach(bestSellersURL=>{imageArray.push(`https://issadu.com/web/${bestSellersURL.url_img}`) })
+    cacheImages(imageArray)
+  }
+  const cacheImages = async (srcArray) => {
+    const promises= await srcArray.map((src) => {
+      return new Promise(function(resolve,reject) {
+        const img = new Image();
+        img.src = src;
+        img.onload = resolve();
+        img.onerror = reject();
+      });
+    });
+    await Promise.all(promises);
+    setIsLoading(false);
+  }
+ 
+  useEffect(() => {
+    if (isInitialMount.current) {
+      getBestSellerImages();
+        isInitialMount.current = false;
+     } else {
+        return () => {
+        }
+     }
+  },[])
   return (
     <Provider store={store}>
       <CartProvider>
+      {isLoading && <Loader/>}
         <Router>
             <div className="App">
             <Navbar />

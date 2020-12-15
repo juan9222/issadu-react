@@ -38,3 +38,37 @@
     height: auto;
     justify-content: space-between;
 }
+
+@media screen and (max-width: 780px) {
+    .FinalSelection {
+        width: 77vw;
+        padding: 0vw 0vw;
+        margin: 0vw 0vw 2vw 14vw;
+    }
+    .FinalSelection__Title {
+        font-size: 10vw;
+    }
+    .FinalSelection__Flex-Item {
+        flex-direction: column;
+        margin-top: 6vw;
+        margin-bottom: 6vw;
+    }
+    .FinalSelection__Item-Description {
+        font-size: 4.5vw;
+      }
+    .FinalSelection__Item-Price {
+        font-size: 5.5vw;
+        width: 77vw;
+        text-align: left;
+      }
+    h2 {
+        margin: 3vw 0vw;
+        font-size: 5.5vw;
+      }
+    .ShoppingCart__Buy {
+        padding: 5vw 3vw;
+        border-radius: 8vw;
+        text-align: center;
+    }
+      
+}

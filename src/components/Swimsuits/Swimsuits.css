@@ -108,3 +108,56 @@
   width: 16.2vw;
 }
 
+
+@media screen and (max-width: 780px) {
+  .Swimsuits {
+    justify-content: center;
+  }
+  .Swimsuits__Image {
+    width: 65vw;
+    height: 85vw;
+  }
+  .Swimsuits__Sub {
+    font-size: 7.6vw;
+  }
+  .Swimsuits__Flex {
+    width: 50vw;
+  }
+  .Swimsuits__Value {
+    font-size: 5.5vw;
+  }
+  .Swimsuits__Discount {
+    font-size: 5.5vw;
+  }
+  .Swimsuits__Row {
+    width: 59vw;
+    height: 8vw;
+  }
+  .Swimsuits__Button-Customize {
+    padding: 2.3vw 3vw;
+    height: 1.3vw;
+    font-size: 2.8vw;
+  }
+  .Swimsuits__Button-Buy {
+    padding: 2.3vw 3vw;
+    height: 1.3vw;
+    font-size: 2.8vw;
+  }
+  .Swimsuits__DiscountNumber {
+    margin: 0vw 40vw -16.6vw -20vw;
+    padding: 3.2vw 1.3vw 6vw 0.4vw;
+    font-size: 7vw;
+  }
+  .Swimsuits__Sub{
+    width: 80vw;
+    text-align: center;
+  }
+  .Swimsuits__Column {
+    width: 80vw;
+    padding: 6vw 0vw;
+  }
+  .Swimsuits__Subcolumn {
+    width: 80vw;
+  }
+}
+

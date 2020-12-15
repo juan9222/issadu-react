@@ -12,7 +12,7 @@ const BikiniPanty = ({pantyModel, setPantyModel, sizeModel, setSizeModel, setPan
                 pantys.map((panty) => ( 
                     panty.tallas.map((options, index) => (
                         (options.talla === sizeModel) ?
-                            <img key={index} className="Bikini__Models" src={`http://issadu.com/web/${panty.url_icon}`} alt="Muestra" onClick={() => setPantyModel(panty.reference)} />
+                            <img key={index} className={"Bikini__Models " + ((pantyModel === panty.reference) ? 'Bikini__Models--Selected' : null)} src={`http://issadu.com/web/${panty.url_icon}`} alt="Muestra" onClick={() => setPantyModel(panty.reference)} />
                             :
                             null
                     ))                       

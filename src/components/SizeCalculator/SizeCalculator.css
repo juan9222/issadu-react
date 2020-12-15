@@ -71,6 +71,7 @@
   .SizeCalculator__Close {
     width: 3vw;
     cursor: pointer;
+    color: #00AEEF;
   }
 
 /* Chrome, Safari, Edge, Opera */
@@ -84,3 +85,45 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
 }
+
+.SizeCalculator__Warning {
+  font-size: 2.5vw;
+  font-family: "Muli", sans-serif;
+  color: #00AEEF;
+}
+
+@media screen and (max-width: 780px) {
+  .SizeCalculator__Container {
+    padding: 10vw 7vw;
+  }
+  .SizeCalculator___Title {
+    font-size: 7vw;
+  }
+  .SizeCalculator__Close {
+    width: 11vw;
+  }
+  .SizeCalculator__Description {
+    width: auto;
+    font-size: 5vw;
+  }  
+  .SizeCalculator__Measure {
+    width: auto;
+  }
+  .SizeCalculator__Row {
+    padding: 1vw 4vw;
+    width: auto;
+  }
+  .SizeCalculator__Text {
+    padding: 0vw 5vw 0vw 0vw;
+  }
+  .SizeCalculator__Input {
+    width: 12vw;
+  }
+  .SizeCalculator__Warning {
+    font-size: 5.5vw;
+    font-family: "Muli", sans-serif;
+    color: #00AEEF;
+  }
+
+}
+

@@ -97,4 +97,48 @@
 
 .Checkout__Phone {
     margin-bottom: 2vw;
-  }
+}
+
+@media screen and (max-width: 780px) {
+    .Checkout {
+        flex-direction: column-reverse;
+    }
+    .Checkout__Separator {
+        width: 78vw;
+        margin-left: 14vw;
+    }
+    .Checkout__Logo {
+        width: 65vw;
+        height: 36vw;
+    }
+    .Checkout__Label-Contact {
+        font-size: 6vw;
+    }      
+    .Checkout__Mail {
+        width: 68vw;
+    }
+    .Checkout__Input {
+        font-size: 5vw;
+        border-radius: 3vw;
+    }
+    .Checkout__Flex {
+        flex-direction: column;
+        width: 68vw;
+    }
+    .Checkout__CC {
+        width: 68vw;
+        color: #333333;
+    }
+    .Checkout__Country {
+        width: 68vw;
+        color: #333333;
+    }
+    .Checkout__Province {
+        width: 68vw;
+        color: #333333;
+    }
+    .Checkout_Buy {
+        font-size: 10vw;
+        padding: 4vw 13.6vw;
+    }
+}

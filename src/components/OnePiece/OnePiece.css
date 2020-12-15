@@ -57,9 +57,20 @@
 
 .OnePiece__Size {
     color: #3F414C;
-    font-size: 2vw;
-    margin: 0vw 1vw;
+    font-size: 1.6vw;
+    margin: 0vw 0.3vw;
+    width: 3vw;
+    height: 3vw;
+    padding: 1vw 1vw;
+    text-align: center;
+    line-height: 3vw;
 }
+
+.OnePiece__Size--Selected {
+    border: 0.2vw solid #00AEEF;
+    border-radius: 4vw;
+}
+
 
 .OnePiece__Titles {
     font-family: "Muli";
@@ -74,6 +85,12 @@
 
 .OnePiece__Models {
     width: 5vw;
+}
+.OnePiece__Models--Selected {
+    border: solid;
+    border-width: 0.2vw;
+    border-radius: 100vw;
+    border-color: #00AEEF;
 }
 
 .OnePiece__One {
@@ -145,8 +162,14 @@ input[type=radio] {
 }
 
 .OnePiece__Print {
-    width: 3vw;
+    width: 4vw;
+    height: 4vw;
     margin: 0.2vw 0.2vw;
+  }
+
+.OnePiece__Print--Selected {
+    border: 0.2vw solid #00AEEF;
+    border-radius: 4vw;
 }
 
 .OnePiece__Print-White {
@@ -292,3 +315,85 @@ input[type=radio] {
     border-style: solid;
     width: fit-content;
 }
+
+
+
+
+@media screen and (max-width: 780px) {
+    .OnePiece {
+        flex-direction: column;
+    }
+    .OnePiece__Print {
+        width: 11vw;
+        height: 11vw;
+        margin: 1.2vw 1.2vw;
+    }
+    .OnePiece__Print--Selected {
+        border: 0.8vw solid #00AEEF;
+        border-radius: 100vw;
+      }
+    .OnePiece-Main {
+        margin: 0vw 0vw 0vw 25vw;
+        width: 73vw;
+        height: 78vw;
+    }
+    .OnePiece__Customizer {
+        width: 72vw;
+        margin: -36vw 0vw 0vw 26vw;
+    }
+    .OnePiece__Step1-Title {
+        font-size: 3.4vw;
+    }
+    .OnePiece__Step1-Sub {
+        font-size: 3vw;
+    }
+    .OnePiece__Flex-Models {
+        width: 25vw;
+        display: flex;
+        justify-content: space-between;
+        padding: 1vw 0vw;
+    }
+    .OnePiece__Models {
+        width: 13vw;
+    }
+    .OnePiece__Models--Selected {
+        border-width: 0.8vw;
+        border-radius: 100vw;
+    }
+    .Bikini__Top {
+        font-size: 4vw;
+        border-width: 0.5vw;
+        padding: 2vw 6vw;
+        border-radius: 3vw;
+      }
+      .OnePiece__Titles{
+        font-size: 3vw;
+      }
+    .OnePiece__Color {
+        width: 73vw;
+        height: 78vw;
+        margin: -78.8vw 0vw 40vw 25vw;
+      }
+    .OnePiece__Flex-Size {
+        width: 72vw;
+        flex-flow: wrap;
+    }
+    .OnePiece__Size {
+        color: #3F414C;
+        font-size: 5vw;
+        width: 11vw;
+        height: 11vw;
+        padding: 2vw 2vw;
+        line-height: 11vw;
+    }
+
+    .OnePiece__Size--Selected {
+        border: 0.8vw solid #00AEEF;
+        border-radius: 100vw;
+    }
+    
+
+}
+
+
+

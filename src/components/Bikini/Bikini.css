@@ -236,6 +236,7 @@ input[type=radio] {
     border-style: solid;
     border-radius: 1vw;
     padding: 0.5vw 1.9vw;
+    border-width: 0.3vw;
   }
 
 .Bikini__Top--Selected {
@@ -259,6 +260,7 @@ input[type=radio] {
     border-style: solid;
     border-radius: 1vw;
     padding: 0.8vw 1vw;
+    border-width: 0.3vw;
   }
 
 .Bikini__Girl {
@@ -270,8 +272,76 @@ input[type=radio] {
 }
 
 .Bikini__Print--Selected {
-    border-style: solid;
+    border: 0.2vw solid #00AEEF;
     border-radius: 100vw;
-    border-width: 0.2vw;
-    border-color: #00AEEF;
+  }
+
+  @media screen and (max-width: 780px) {
+    .Bikini {
+        flex-direction: column;
+    }
+    .Bikini__Girl {
+        padding: 0vw 0vw 0vw 25vw;
+    }
+    .Bikini__Color {
+        margin: -74vw 0vw 41vw 25vw;
+    }
+    .Bikini__Color-Top {
+        width: 73vw;
+        height: 35vw;
+    }
+    .Bikini-Main__Top {
+        width: 73vw;
+        height: 39vw;
+    }
+    .Bikini-Main__Bottom {
+        width: 73vw;
+        height: 39vw;
+        margin-top: -0.9vw;
+    }
+    .Bikini__Color-Bottom {
+        width: 73vw;
+        height: 35vw;
+    }
+    .Bikini__Customizer {
+        width: 72vw;
+        margin: -36vw 0vw 0vw 26vw;
+    }
+    .Bikini__Title {
+        font-size: 4.8vw;
+        margin-top: 1vw;
+    }
+    .Bikini__Top-Step1-Sub {
+        font-size: 3vw;
+    }
+    .Bikini__Top-Step1-Title {
+        font-size: 3.4vw;
+    }
+    .Bikini__Top--Selected {
+        font-size: 4vw;
+        padding: 2vw 6vw;
+        border-radius: 3vw;
+    }
+    .Bikini__Top {
+        font-size: 4vw;
+        border-width: 0.5vw;
+        padding: 2vw 6vw;
+        border-radius: 3vw;
+        border-width: 0.3vw;
+    }
+    .Bikini__Panty {
+        font-size: 4vw;
+        border-width: 0.5vw;
+        padding: 2vw 6vw;
+        border-radius: 3vw;
+        border-width: 0.3vw;
+    }
+    .Bikini__Pipe {
+        font-size: 6vw;
+        margin: 0vw 3vw;
+    }
+    .Bikini__Print--Selected {
+        border: 0.8vw solid #00AEEF;
+        border-radius: 100vw;
+      }
   }

@@ -9,13 +9,15 @@ import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 export default function ShoppingCart() {
     const route = useSelector(state => state.route);
     return (
-        <div className="ShoppingCart">
+        <>
             {
                 (route.route !== "/checkout" && route.route !== "/cart" && route.route !== "/customizer") &&
+                <div className="ShoppingCart">
                 <Link to="/cart">
                 <FontAwesomeIcon icon={faShoppingCart} size="2x" />
                 </Link>
+                </div>
             }
-        </div>
+        </>
     )
 }

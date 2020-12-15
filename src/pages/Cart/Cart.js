@@ -45,7 +45,7 @@ export default function Cart() {
                     ))
                 }
 
-                <tr>
+                <tr className="Cart__Table-End">
                     <th></th>
                     <th></th>
                     <th>Subtotal de la orden</th>
@@ -54,7 +54,28 @@ export default function Cart() {
                 </tr>
                 </tbody>
             </table>
-            <h3>los costes de envío y los impuestos se añaden durante el pago.</h3>
+            <div className="CartMobile">
+            {
+                    cart.map((cartElement,index)=>(
+                        (cartElement.quantity > 0) &&
+                        <div key={index}>
+                            <div className="CartMobile__Text">Producto: {cartElement.type} {cartElement.model}</div>
+                            <div className="CartMobile__Text">Color: {cartElement.color} </div>
+                            <div className="CartMobile__Text">Talla: {cartElement.size} </div>
+                            <div className="CartMobile__Text">Precio: ${cartElement.priceDiscount}</div>
+                            <div className="CartMobile__Text">Cantidad {cartElement.quantity}</div>
+                            <div className="CartMobile__Text">Quitar: <FontAwesomeIcon  onClick={remove(cartElement.id)} icon={faTrashAlt} /></div>
+                            <div className="CartMobile__Text">Valor Final: l${cartElement.priceDiscount*cartElement.quantity}</div>
+                            <hr/>
+                        </div>
+                    ))
+            }
+            <div className="CartMobile__Text">Subtotal de la orden</div>
+            <div className="CartMobile__Text">${cart.map(element => element.priceDiscount*element.quantity).reduce((prev, next) => prev + next, 0)}</div>
+            <Link className="ShoppingCart__Buy" to="/checkout">Finalizar Pedido</Link>
+            </div>
+            <h3 className="Cart__Advice">los costos de envío y los impuestos se añaden durante el pago.</h3>
+
         </div>
     )
 }

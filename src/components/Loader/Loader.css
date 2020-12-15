@@ -1,0 +1,64 @@
+.Loader {
+  z-index: 100000;
+  position: absolute;
+  transform: translate(0vw,0vw);
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 101%;
+  align-items: center;
+  justify-content: center;
+}
+.Loader__Logo {
+    width: 43vw;
+    animation-name: pulse;
+    animation-timing-function: ease-in-out;
+    animation-duration: 2s;
+    animation-play-state: running;
+    animation-iteration-count: infinite;
+}
+.Loader__Loading {
+    font-family: "Muli";
+    font-size: 4vw;
+    margin-top: 6vw;
+
+}
+
+.Loader__Loading::after {
+    content: ".";
+    animation-name: addDots;
+    animation-timing-function: ease-in-out;
+    animation-duration: 2s;
+    animation-play-state: running;
+    animation-iteration-count: infinite;
+}
+
+@keyframes pulse {
+    from {
+      transform: scale3d(1, 1, 1);
+    }
+  
+    50% {
+      transform: scale3d(1.1, 1.1, 1.1);
+    }
+  
+    to {
+      transform: scale3d(1, 1, 1);
+    }
+  }
+
+  @keyframes addDots {
+    from {
+        content:  ".";
+    }
+  
+    50% {
+        content:  "..";
+    }
+  
+    to {
+        content:  "...";
+    }
+  }
+  

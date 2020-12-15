@@ -21,8 +21,8 @@ const Footer = props => {
             </div>
             <div className="Footer__Service">
                 <h3 className="Footer__Service-Title">SERVICIO AL CLIENTE: </h3>
-                <a className="Footer__Links" href="https://web.whatsapp.com/send?l=es&phone=573044529259">&nbsp;CONTACTANOS&nbsp;|</a>
-                <Link className="Footer__Links" to="/contact">&nbsp;&nbsp;SOBRE NOSOTRAS&nbsp;&nbsp;|&nbsp;</Link>
+                <a className="Footer__Links" href="https://web.whatsapp.com/send?l=es&phone=573044529259">&nbsp;CONTACTANOS<span className="Footer__Pipe">&nbsp;|</span></a>
+                <Link className="Footer__Links" to="/contact">&nbsp;&nbsp;SOBRE NOSOTRAS<span className="Footer__Pipe">&nbsp;&nbsp;|&nbsp;</span></Link>
                 {/* <Link className="Footer__Links" to="/contact">&nbsp;TARIFAS DE ENVÍO&nbsp;&nbsp;|&nbsp;</Link> */}
                 <Link className="Footer__Links" to="/legal">&nbsp; ACUERDOS DE DEVOLUCIÓN</Link>
             </div>

@@ -14,6 +14,7 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "axios": "^0.20.0",
+    "body-scroll-lock": "^3.1.5",
     "express": "^4.17.1",
     "formik": "^2.2.5",
     "react": "^16.13.1",
@@ -27,7 +28,7 @@
     "yup": "^0.29.3"
   },
   "scripts": {
-    "start" : "node server.js",
+    "start": "node server.js",
     "starter": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

@@ -113,11 +113,12 @@ const OnePiece = ({cloth1ref="Carmen",cloth1color="IP020"}) => {
                 onePieces.map((onePiece) => ( 
                     onePiece.tallas.map((options, index) => (
                         (options.talla === sizeModel) ?
-                            <img key={index} className="OnePiece__Models" src={`http://issadu.com/web/${onePiece.url_icon}`} alt="Muestra" onClick={() =>{setOnePieceModel(onePiece.reference)}} />
+                            <img key={index} className={"OnePiece__Models " + ((onePieceModel === onePiece.reference) ? 'OnePiece__Models--Selected' : null)} src={`http://issadu.com/web/${onePiece.url_icon}`} alt="Muestra" onClick={() =>{setOnePieceModel(onePiece.reference)}} />
                             :
                             null
                     ))                       
                 ))
+                
                 }
                 </div>
                 }
@@ -128,7 +129,7 @@ const OnePiece = ({cloth1ref="Carmen",cloth1color="IP020"}) => {
                 onePieces.map( (onePiece) => (  
                         (onePieceModel === onePiece.reference) ?
                         onePiece.tallas.map((options,index) => {
-                                return <div key={index} className="OnePiece__Size" onClick={() => (setSizeModel(options.talla))}>{options.talla}</div>
+                                return <div key={index} className={"OnePiece__Size " + ((sizeModel === options.talla) ? 'OnePiece__Size--Selected' : null)} onClick={() => (setSizeModel(options.talla))}>{options.talla}</div>
                             })
                         :
                             null
@@ -143,7 +144,7 @@ const OnePiece = ({cloth1ref="Carmen",cloth1color="IP020"}) => {
                 onePieces.map( (onePiece) => (  
                         (onePieceModel === onePiece.reference) ?
                         onePiece.color.planos.map((plano,index) => {
-                            return <img key={index} className="OnePiece__Print" src={`http://issadu.com/web/${plano.img_circular}`} alt="Muestra" onClick={() => setOnePieceColor(plano.reference)} style={{"pointerEvents": "all"}} />
+                            return <img key={index} className={"OnePiece__Print " + ((onePieceColor === plano.reference) ? 'OnePiece__Print--Selected' : null)}  src={`http://issadu.com/web/${plano.img_circular}`} alt="Muestra" onClick={() => setOnePieceColor(plano.reference)} style={{"pointerEvents": "all"}} />
                         })
                         :
                         null
@@ -157,7 +158,7 @@ const OnePiece = ({cloth1ref="Carmen",cloth1color="IP020"}) => {
                 onePieces.map( (onePiece) => (  
                     (onePieceModel === onePiece.reference) ?
                     onePiece.color.estampados.map((estampado,index) => {
-                        return <img key={index} className="OnePiece__Print" src={`http://issadu.com/web/${estampado.img_circular}`} alt="Muestra" onClick={() => setOnePieceColor(estampado.reference)} style={{"pointerEvents": "all"}} />
+                        return <img key={index} className={"OnePiece__Print " + ((onePieceColor === estampado.reference) ? 'OnePiece__Print--Selected' : null)} src={`http://issadu.com/web/${estampado.img_circular}`} alt="Muestra" onClick={() => setOnePieceColor(estampado.reference)} style={{"pointerEvents": "all"}} />
                     })
                     :
                     null

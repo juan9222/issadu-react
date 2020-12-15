@@ -3,7 +3,6 @@ import React, {useState,useEffect, useRef, useCallback, useContext} from 'react'
 import APIService from '../../services/APIService.js'
 import {TopContext} from '../../context/TopContext.js'
 import {PantyContext} from '../../context/PantyContext.js'
-
 import './Bikini.css'
 
 // Components
@@ -143,7 +142,7 @@ const Bikini = ({piece,setPiece,cloth1ref = "Daniela",cloth1color = "IP020",clot
                 (topModel === top.reference) ?
                     top.color.planos.map((plano, index) =>(
                         (topColor === plano.reference) ?
-                        <img key={index} className="Bikini__Color-Top" src={`http://issadu.com/web/${plano.img_rectangular}`} alt="Top Color"/>
+                            <img key={index} className="Bikini__Color-Top" src={`http://issadu.com/web/${plano.img_rectangular}`} alt="Top Color"/>
                         :
                         null
                     ))
@@ -201,7 +200,7 @@ const Bikini = ({piece,setPiece,cloth1ref = "Daniela",cloth1color = "IP020",clot
                 <div className="Bikini__Pipe">|</div>
                 <div className={"Bikini__Panty " + ((piece === "Panty") ? 'Bikini__Top--Selected' : null)}  onClick={() => setPiece("Panty")}>PANTY</div>
                </div>
-               {piece === "Top" && <BikiniTop tops={tops} topModel={topModel} setTopModel={setTopModel} setTopColor={setTopColor} sizeModel={sizeModel} setSizeModel={setSizeModel} />}
+               {piece === "Top" && <BikiniTop topColor={topColor} tops={tops} topModel={topModel} setTopModel={setTopModel} setTopColor={setTopColor} sizeModel={sizeModel} setSizeModel={setSizeModel} />}
                {piece === "Panty" && <BikiniPanty  pantys={pantys} pantyModel={pantyModel} setPantyModel={setPantyModel} setPantyColor={setPantyColor} sizeModel={sizeModel} setSizeModel={setSizeModel}/>}
            </div>
         </div>

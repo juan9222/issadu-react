@@ -1,4 +1,5 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect,useRef} from 'react';
+import APIService from '../../services/APIService.js'
 import Bikini from '../../components/Bikini/Bikini.js'
 import OnePiece from '../../components/OnePiece/OnePiece.js'
 import Sarong from '../../components/Sarong/Sarong.js'
@@ -14,30 +15,73 @@ import TopProvider from "../../context/TopContext.js"
 import PantyProvider from "../../context/PantyContext.js"
 import Hook from '../../assets/Swimsuits/hook.svg'
 import Question from '../../assets/Swimsuits/questions.svg'
+import Loader from "../../components/Loader/Loader.js"
+
+
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { faHeart } from '@fortawesome/free-regular-svg-icons'
 import './Customizer.css'
 
-const Customizer = (props) => {
+const Customizer = (props) => {  
+    const isInitialMount = useRef(true);
+    const [isLoading, setIsLoading] = useState(true);
     const bikiniOrOnePiece = props.location.state.bikiniOrOnePiece;
     const cloth1type = props.location.state.cloth1type;
-    const cloth1ref = props.location.state.cloth1ref;
-    const cloth1color = props.location.state.cloth1color;
+    const cloth1ref =  props.location.state.cloth1ref;
+    const cloth1color =  props.location.state.cloth1color;
     const cloth2type = props.location.state.cloth2type;
-    const cloth2ref = props.location.state.cloth2ref;
+    const cloth2ref =  props.location.state.cloth2ref;
     const cloth2color = props.location.state.cloth2color;
     const [mode, setMode] = useState(bikiniOrOnePiece);
     const [piece, setPiece] = useState("Top")
     const [showCloseSizeCalculator, setShowCloseSizeCalculator] = useState(false);
-
+    async function getCustomizerImages() {
+        let imageArray = []
+        let topURLs = await APIService.getCloth("Top");
+        topURLs.forEach(topURL => {
+          topURL.tallas.forEach(talla => imageArray.push(`https://issadu.com/web/${talla.fotos}`))
+          imageArray.push(`https://issadu.com/web/${topURL.url_icon}`)
+        })
+        let pantyURLs = await APIService.getCloth("Panty");
+        pantyURLs.forEach(pantyURL => {
+          pantyURL.tallas.forEach(talla => imageArray.push(`https://issadu.com/web/${talla.fotos}`))
+          imageArray.push(`https://issadu.com/web/${pantyURL.url_icon}`)
+        })
+        let onePieceURLs = await APIService.getCloth("Una Pieza");
+        onePieceURLs.forEach(onePieceURL => {
+          onePieceURL.tallas.forEach(talla => imageArray.push(`https://issadu.com/web/${talla.fotos}`))
+          imageArray.push(`https://issadu.com/web/${onePieceURL.url_icon}`)
+        })
+        cacheImages(imageArray)
+      }
+      const cacheImages = async (srcArray) => {
+        const promises= await srcArray.map((src) => {
+          return new Promise(function(resolve,reject) {
+            const img = new Image();
+            img.src = src;
+            img.onload = resolve();
+            img.onerror = reject();
+          });
+        });
+        await Promise.all(promises);
+        setIsLoading(false);
+      }
     useEffect(() => {
-        if (bikiniOrOnePiece === "Una Pieza") {
-            setMode("One Piece")
-        }
-        if (bikiniOrOnePiece === "Top" || bikiniOrOnePiece === "Panty" ) {
-            setMode("Bikini")
-            setPiece("Top")
-        }
+        if (isInitialMount.current) {
+            getCustomizerImages();
+            window.scrollTo(0, 0)
+            if (bikiniOrOnePiece === "Una Pieza") {
+                setMode("One Piece")
+            }
+            if (bikiniOrOnePiece === "Top" || bikiniOrOnePiece === "Panty" ) {
+                setMode("Bikini")
+                setPiece("Top")
+            }
+              isInitialMount.current = false;
+           } else {
+              return () => {
+              }
+           }
         // eslint-disable-next-line 
     }, [])
     return (   
@@ -45,6 +89,7 @@ const Customizer = (props) => {
             <OnePieceProvider>
             <TopProvider>
             <PantyProvider>
+            {isLoading && <Loader/>}
             <img className="Customizer__Snail" src={Snail} alt="Snail"/>
             <img className="Customizer__Coconut" src={Coconut} alt="Coconut"/>
             <img className="Customizer__Float" src={Float} alt="Float"/>

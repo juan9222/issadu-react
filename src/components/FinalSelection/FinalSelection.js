@@ -44,7 +44,7 @@ export default function FinalSelection({province}) {
                 </div>
                 ))
             }
-            <div className="FinalSelection__Flex">
+            <div className="FinalSelection__Flex-Sub">
             <h2>Subtotal:</h2> <h2>${cart.map(element => element.priceDiscount*element.quantity).reduce((prev, next) => prev + next, 0)}</h2>
             </div>
             <div className="FinalSelection__Flex"> 

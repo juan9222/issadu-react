@@ -96,9 +96,8 @@ const PreCheckout = ({mode, piece}) => {
             }
         </div>
         <div>
-            <h2 className="Bikini__Total">TOTAL: ${cart.map(element => element.priceDiscount*element.quantity).reduce((prev, next) => prev + next, 0)}</h2>
+            <h2 className="Bikini__Total">TOTAL: ${cart.map(element => element.priceDiscount*element.quantity).reduce((prev, next) =>  new Intl.NumberFormat("es-ES").format(prev + next) , 0)}</h2>
             <div className="Bikini__Buy" onClick={() => addToCart(uuidv4(),mode,piece)}>AGREGAR AL CARRITO</div>
-            {/* <div className="Bikini__Buy" onClick={Holi(topObject)}>AGREGAR AL CARRITO</div> */}
             <Link to="/checkout">
                 <div className="Bikini__Buy">FINALIZAR COMPRA</div>
             </Link>

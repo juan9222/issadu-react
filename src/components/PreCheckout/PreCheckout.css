@@ -113,3 +113,40 @@
     background: #3F414C;
     margin: 0vw;
 }
+
+
+@media screen and (max-width: 780px) {
+    .PreCheckout {
+        margin-top: 2vw;
+        width: 70vw;
+        margin: 0vw 0vw 0vw 26vw;
+    }
+    .Bikini__Flex-Checkout {
+        flex-direction: column;
+    }
+    .Precheckout__Description {
+        font-size: 4vw;
+        margin: 3.3vw 0vw;
+    }
+    .PreCheckout__Button {
+        font-size: 3.2vw;
+        padding: 1.6vw 2vw;
+    }
+    .Bikini__Total {
+        font-size: 5vw;
+    }
+    .Bikini__Buy {
+        padding: 2vw 2vw;
+        font-size: 4vw;
+    }
+    .Bikini__Payment {
+        font-size: 4vw;
+    }
+    .Bikini__Subtotal-Title {
+        font-size: 5vw;
+    }
+    .Precheckout__Column {
+        width: 72vw;
+    }
+}
+

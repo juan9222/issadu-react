@@ -11,10 +11,11 @@
     display: flex;
     font-family: "Muli";
     font-size: 1vw;
-    width: 9vw;
-    justify-content: space-between;
+    align-items: center;
+    width: fit-content;
+    justify-content: flex-start;
     padding: 1vw 0vw;
-    cursor: pointer
+    cursor: pointer;
 }
 
 .Bikini__Titles {
@@ -38,3 +39,19 @@
     width: 29vw;
     text-align: justify;
 }
+
+
+@media screen and (max-width: 780px) {
+    .BikiniPanty__Title {
+        font-size: 3.4vw;
+    }
+    .Bikini__Titles {
+        font-size: 3vw;
+    }
+    .BikiniPanty__Sub {
+        font-size: 3vw;
+        width: 73vw;
+    }
+
+}
+
