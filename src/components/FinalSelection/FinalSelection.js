@@ -37,24 +37,26 @@ export default function FinalSelection({province}) {
             {
                 cart.map((cartElement, index) => (
                 (cartElement.quantity > 0) &&
-                <div key={index} className="FinalSelection__Flex-Item">
+                <div key={index} >
+                    <div className="FinalSelection__Flex-Item">
                     <h3 className="FinalSelection__Item-Description">{cartElement.type} {cartElement.model} |  Color: {cartElement.color} | Talla: {cartElement.size} | Cantidad: {cartElement.quantity}</h3>
-                    <h3 className="FinalSelection__Item-Price">Precio: ${cartElement.priceDiscount*cartElement.quantity}</h3>
-                    <hr/>
+                    <h3 className="FinalSelection__Item-Price">Precio: ${new Intl.NumberFormat("es-ES").format(cartElement.priceDiscount*cartElement.quantity)}</h3>
+                </div>
+                <hr/>
                 </div>
                 ))
             }
             <div className="FinalSelection__Flex-Sub">
-            <h2>Subtotal:</h2> <h2>${cart.map(element => element.priceDiscount*element.quantity).reduce((prev, next) => prev + next, 0)}</h2>
+            <h2>Subtotal:</h2> <h2>${new Intl.NumberFormat("es-ES").format(cart.map(element => element.priceDiscount*element.quantity).reduce((prev, next) => prev + next, 0))}</h2>
             </div>
             <div className="FinalSelection__Flex"> 
             <h2>Envio:</h2>
-            <h2>${shippingPrice}</h2> 
+            <h2>${new Intl.NumberFormat("es-ES").format(shippingPrice)}</h2> 
             </div>
             <hr/>
             <div className="FinalSelection__Flex"> 
             <h2>Total:</h2>
-            <h2>${(cart.map(element => element.priceDiscount*element.quantity).reduce((prev, next) => prev + next, 0))+shippingPrice}</h2>
+            <h2>${new Intl.NumberFormat("es-ES").format((cart.map(element => element.priceDiscount*element.quantity).reduce((prev, next) => prev + next, 0))+shippingPrice)}</h2>
             </div>
         </div>
     )

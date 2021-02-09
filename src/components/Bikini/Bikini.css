@@ -32,7 +32,7 @@
     background-color: white;
     position: relative;
     width: 35vw;
-    height: auto;
+    height: 20vw;
     z-index: 5;
     margin: 0vw 0vw 0vw -36vw;
   }
@@ -135,7 +135,8 @@ input[type=radio] {
 }
 
 .Bikini__Print {
-    width: 3vw;
+    width: 4vw;
+    height: 4vw;
     margin: 0.2vw 0.2vw;
   }
 
@@ -265,6 +266,7 @@ input[type=radio] {
 
 .Bikini__Girl {
     display: flex;
+    height: 40vw;
     flex-direction: column;
     position: relative;
     z-index: 6;
@@ -305,7 +307,11 @@ input[type=radio] {
     }
     .Bikini__Customizer {
         width: 72vw;
-        margin: -36vw 0vw 0vw 26vw;
+        margin: 51vw 0vw 0vw 25vw;
+        overflow-y: scroll;
+        height: 60vw;
+        padding: 0vw 3vw 0vw 1vw;
+      
     }
     .Bikini__Title {
         font-size: 4.8vw;
@@ -328,6 +334,9 @@ input[type=radio] {
         padding: 2vw 6vw;
         border-radius: 3vw;
         border-width: 0.3vw;
+    }
+    .Bikini__Flex-Models {
+        width: 72vw;
     }
     .Bikini__Panty {
         font-size: 4vw;

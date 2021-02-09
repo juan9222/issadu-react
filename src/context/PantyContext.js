@@ -13,9 +13,6 @@ const PantyProvider = (props) => {
         pantyPrice: null,
         pantyPriceDiscount: null,
     })
-    // useEffect(() => {
-    //     localStorage.setItem("Cart",JSON.stringify(pantyObject))
-    // }, [storePantyObject,pantyObject])
     return (
             <PantyContext.Provider value={{pantyObject,storePantyObject }}>
                 {props.children}

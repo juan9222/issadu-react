@@ -9,7 +9,7 @@
 .OnePiece__Customizer {
     position: relative;
     width: 32vw;
-    margin: 0vw 0vw 0vw 6vw;
+    margin: 0vw 0vw 0vw 4vw;
 }
 .OnePiece-Main {
     z-index: 6;
@@ -316,12 +316,41 @@ input[type=radio] {
     width: fit-content;
 }
 
-
+.Customizer__Price {
+    display: none;
+}
 
 
 @media screen and (max-width: 780px) {
+
+    /* .Customizer__Price {
+        position: absolute;
+        z-index: 5;
+        width: auto;
+        transform: translate(9.2vw, 52.6vw);
+        font-family: 'Muli', sans-serif;
+        font-size: 1.7vw;
+        line-height: 2.7vw;
+    }
+
+    .Customizer__Price-Title {
+        font-family: "Anton";
+        color: #00AEEF;
+        font-size: 1.8vw;
+    }
+
+    .Customizer__Price-Discount {
+        font-weight: 700;
+        color: #00AEEF;
+    } */
     .OnePiece {
         flex-direction: column;
+    }
+    .OnePiece__OnePiece {
+        font-size: 4vw;
+        border-width: 0.5vw;
+        padding: 2vw 6vw;
+        border-radius: 3vw;
     }
     .OnePiece__Print {
         width: 11vw;
@@ -340,6 +369,8 @@ input[type=radio] {
     .OnePiece__Customizer {
         width: 72vw;
         margin: -36vw 0vw 0vw 26vw;
+        overflow-y: scroll;
+        height: 60vw;
     }
     .OnePiece__Step1-Title {
         font-size: 3.4vw;
@@ -355,6 +386,7 @@ input[type=radio] {
     }
     .OnePiece__Models {
         width: 13vw;
+        height: 13vw;
     }
     .OnePiece__Models--Selected {
         border-width: 0.8vw;

@@ -121,7 +121,7 @@
     font-size: 7.6vw;
   }
   .Swimsuits__Flex {
-    width: 50vw;
+    width: 60vw;
   }
   .Swimsuits__Value {
     font-size: 5.5vw;
@@ -144,8 +144,8 @@
     font-size: 2.8vw;
   }
   .Swimsuits__DiscountNumber {
-    margin: 0vw 40vw -16.6vw -20vw;
-    padding: 3.2vw 1.3vw 6vw 0.4vw;
+    margin: 0 40vw -15.6vw -20vw;
+    padding: 3.2vw 3.3vw 6vw .4vw;
     font-size: 7vw;
   }
   .Swimsuits__Sub{

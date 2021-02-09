@@ -3,6 +3,10 @@
     width: 100vw;
 }
 
+.Customizer__PreCheckout {
+    margin: 0vw 0vw 0vw 0vw
+}
+
 .Customizer__Closet {
     position: absolute;
     z-index: 5;
@@ -113,7 +117,7 @@
     position: relative;
     font-family: "Anton", sans-serif;
     color: #3F414C;
-    width: 12vw;
+    width: 14vw;
     font-size: 3vw;
     text-align: left;
     line-height: 2.7vw;
@@ -216,7 +220,8 @@
     }
     .Customizer__Advice {
         font-size: 5vw;
-        margin: -26vw 0vw 0vw 4vw;
+        width: 21vw;
+        margin: -28vw 0vw 0vw 2vw;
     }
     .Customizer__Advice-Text {
         margin-top: 1.7vw;

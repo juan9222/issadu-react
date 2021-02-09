@@ -1,17 +1,43 @@
 .PreCheckout {
-    padding: 5vw 0vw;
-    width: 54vw;
-    margin: 0vw 0vw 0vw 45vw;
+    width: 37vw;
+    margin: -16vw 0vw 0vw 9vw;
   }
 
 .Bikini__Flex-Checkout {
     display: flex;
     justify-content: space-between;
     position: relative;
-    width: 54vw;
-    padding: 2vw 0vw 0vw 0vw;
+    width: auto;
+    padding: 0vw 0vw 8vw 0vw;
     box-sizing: border-box;
 }
+
+
+.PreCheckout__Price {
+    position: relative;
+    z-index: 5;
+    width: auto;
+    font-family: 'Muli', sans-serif;
+    font-size: 1.7vw;
+    line-height: 2.7vw;
+}
+
+.PreCheckout__Price-Title {
+    font-family: "Anton";
+    color: #00AEEF;
+    font-size: 1.8vw;
+}
+
+.PreCheckout__Price-Discount {
+    font-weight: 700;
+    color: #00AEEF;
+}
+
+
+.Precheckout__Description-Bold {
+    font-weight: 700;
+}
+
 
 .Bikini__Subtotal {
     display: flex;
@@ -55,7 +81,7 @@
     padding: 1vw 2vw;
     width: auto;
     font-family: "Muli";
-    font-size: 2vw;
+    font-size: 1.3vw;
     margin: 1.3vw 0vw;
     cursor: pointer;
     display: flex;
@@ -85,6 +111,8 @@
   .Precheckout__HR {
     width: 17vw;
     border-style: solid;
+    border-width: 0.01vw;
+    border-color: grey;
   }
 
   .PreCheckout__Flex{
@@ -107,6 +135,7 @@
 }
 
 .Bikini__HR {
+    display: none;
     width: 54vw;
     height: 0.1vw;
     border-style: none;
@@ -119,15 +148,16 @@
     .PreCheckout {
         margin-top: 2vw;
         width: 70vw;
-        margin: 0vw 0vw 0vw 26vw;
+        margin: 2vw 0vw 3vw 26vw;      
     }
     .Bikini__Flex-Checkout {
         flex-direction: column;
     }
     .Precheckout__Description {
         font-size: 4vw;
-        margin: 3.3vw 0vw;
-    }
+        margin: 1vw 0vw;
+        line-height: 5vw;
+      }
     .PreCheckout__Button {
         font-size: 3.2vw;
         padding: 1.6vw 2vw;

@@ -201,7 +201,7 @@ const Bikini = ({piece,setPiece,cloth1ref = "Daniela",cloth1color = "IP020",clot
                 <div className={"Bikini__Panty " + ((piece === "Panty") ? 'Bikini__Top--Selected' : null)}  onClick={() => setPiece("Panty")}>PANTY</div>
                </div>
                {piece === "Top" && <BikiniTop topColor={topColor} tops={tops} topModel={topModel} setTopModel={setTopModel} setTopColor={setTopColor} sizeModel={sizeModel} setSizeModel={setSizeModel} />}
-               {piece === "Panty" && <BikiniPanty  pantys={pantys} pantyModel={pantyModel} setPantyModel={setPantyModel} setPantyColor={setPantyColor} sizeModel={sizeModel} setSizeModel={setSizeModel}/>}
+               {piece === "Panty" && <BikiniPanty pantyColor={pantyColor} pantys={pantys} pantyModel={pantyModel} setPantyModel={setPantyModel} setPantyColor={setPantyColor} sizeModel={sizeModel} setSizeModel={setSizeModel}/>}
            </div>
         </div>
     )

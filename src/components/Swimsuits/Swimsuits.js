@@ -29,8 +29,8 @@ function Swimsuits() {
                         <div className="Swimsuits__Subcolumn">
                             <h3 className="Swimsuits__Sub">{swimsuit.description}</h3>
                             <div className="Swimsuits__Flex">
-                                <h3 className="Swimsuits__Value">{swimsuit.price + " $"}</h3>
-                                <h3 className="Swimsuits__Discount">{Math.floor(swimsuit.price * (1 - (swimsuit.discount * 0.01)))+ " $"}</h3>
+                                <h3 className="Swimsuits__Value">{"$ " + new Intl.NumberFormat("es-ES").format(swimsuit.price)}</h3>
+                                <h3 className="Swimsuits__Discount">{ "$ "+ new Intl.NumberFormat("es-ES").format( Math.floor(swimsuit.price * (1 - (swimsuit.discount * 0.01))))}</h3>
                             </div>
                             <div className="Swimsuits__Row"> 
                                 <Link to={{ pathname: "/customizer", 

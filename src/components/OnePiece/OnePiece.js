@@ -100,8 +100,8 @@ const OnePiece = ({cloth1ref="Carmen",cloth1color="IP020"}) => {
                 ))
             }
             <div className="OnePiece__Customizer">
-            <h2 className="Bikini__Title">ARMA TU BIKINI COMO QUIERAS</h2>
-                <h2 className="OnePiece__Step1-Title">1.Prenda</h2>
+            <h2 className="Bikini__Title">ARMA TU ENTERIZO COMO QUIERAS</h2>
+            <h2 className="OnePiece__Step1-Title">1.Prenda</h2>
                 <h4 className="OnePiece__Step1-Sub">Selecciona la prenda que vas a diseñar</h4>
                 <div className={"OnePiece__OnePiece"}>ENTERIZO</div>
                 <h2 className="OnePiece__Step1-Title">2.Modelo</h2>

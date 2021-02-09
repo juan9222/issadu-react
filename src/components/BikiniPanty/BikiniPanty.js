@@ -1,7 +1,7 @@
 import React from 'react';
 import './BikiniPanty.css'
 
-const BikiniPanty = ({pantyModel, setPantyModel, sizeModel, setSizeModel, setPantyColor, pantys}) => {
+const BikiniPanty = ({pantyColor,pantyModel, setPantyModel, sizeModel, setSizeModel, setPantyColor, pantys}) => {
     return (
         <div className="BikiniPanty">
                <h2 className="BikiniPanty__Title">2.Modelo</h2>
@@ -26,7 +26,7 @@ const BikiniPanty = ({pantyModel, setPantyModel, sizeModel, setSizeModel, setPan
                     pantys.map( (panty) => (  
                         (pantyModel === panty.reference) ?
                             panty.tallas.map((options,index) => {
-                                return <div key={index} className="BikiniTop__Size" onClick={() => setSizeModel(options.talla)}>{options.talla}</div>
+                                return <div key={index} className={"BikiniTop__Size " + ((sizeModel === options.talla) ? 'BikiniTop__Size--Selected' : null)} onClick={() => setSizeModel(options.talla)}>{options.talla}</div>
                             })
                         :
                             null
@@ -41,7 +41,14 @@ const BikiniPanty = ({pantyModel, setPantyModel, sizeModel, setSizeModel, setPan
                     pantys.map( (panty) => (  
                         (pantyModel === panty.reference) ?
                         panty.color.planos.map((plano,index) => {
-                           return <img key={index} className="OnePiece__Print" src={`http://issadu.com/web/${plano.img_circular}`} alt="Muestra" onClick={() => setPantyColor(plano.reference)} style={{"pointerEvents": "all"}} />
+                           return <img 
+                           key={index} 
+                           className={"Bikini__Print " + ((pantyColor === plano.reference) ? 'Bikini__Print--Selected' : null)} 
+                           src={`http://issadu.com/web/${plano.img_circular}`} 
+                           alt="Muestra" 
+                           onClick={() => setPantyColor(plano.reference)} 
+                           style={{"pointerEvents": "all"}}
+                           />
                         })
                         :
                         null
@@ -55,7 +62,12 @@ const BikiniPanty = ({pantyModel, setPantyModel, sizeModel, setSizeModel, setPan
                 pantys.map( (panty) => (  
                     (pantyModel === panty.reference) ?
                     panty.color.estampados.map((estampado,index) => {
-                        return <img key={index} className="OnePiece__Print" src={`http://issadu.com/web/${estampado.img_circular}`} alt="Muestra" onClick={() => setPantyColor(estampado.reference)} style={{"pointerEvents": "all"}} />
+                        return <img key={index} 
+                        className={"Bikini__Print " + ((pantyColor === estampado.reference) ? 'Bikini__Print--Selected' : null)} 
+                        src={`http://issadu.com/web/${estampado.img_circular}`} 
+                        alt="Muestra" 
+                        onClick={() => setPantyColor(estampado.reference)} 
+                        style={{"pointerEvents": "all"}} />
                     })
                     :
                     null

@@ -13,9 +13,6 @@ const TopProvider = (props) => {
         topPrice: null,
         topPriceDiscount: null,
     })
-    // useEffect(() => {
-    //     localStorage.setItem("Cart",JSON.stringify(topObject))
-    // }, [storeTopObject,topObject])
     return (
             <TopContext.Provider value={{topObject,storeTopObject }}>
                 {props.children}

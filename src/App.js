@@ -49,6 +49,7 @@ function App() {
         return () => {
         }
      }
+    // eslint-disable-next-line
   },[])
   return (
     <Provider store={store}>

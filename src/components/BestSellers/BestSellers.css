@@ -31,7 +31,7 @@
 @media screen and (max-width: 780px) {
     .BestSellers{
       transform: translate(0vw, 0vw);
-      height: 1125vw;
+      height: 1150vw;
       }
       .BestSellers__Title {
         font-size: 9vw;

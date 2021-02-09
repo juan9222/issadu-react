@@ -7,13 +7,14 @@
 .FinalSelection__Title {
     font-size: 4vw;
     font-family: "Anton";
-    color: #00AEEF
+    color: #00AEEF;
+    margin-bottom: 3vw;
 }
 
 
 .FinalSelection__Flex-Item {
-    margin-top: 3vw;
-    margin-bottom: 3vw;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
     display: flex;
     align-items: center;
     height: auto;
@@ -21,18 +22,25 @@
 }
 
 .FinalSelection__Item-Description {
-    font-size: 1.5vw;
+    font-size: 2vw;
 }
 
 .FinalSelection__Item-Price {
-    font-size: 1.5vw;
-    width: 13vw;
+    font-size: 2vw;
+    width: 17vw;
     text-align: right;
 }
 
+.FinalSelection__Flex-Sub {
+    display: flex;
+    justify-content: space-between;
+    font-size: 2vw;
+}
+
 .FinalSelection__Flex {
-    margin-top: 3vw;
-    margin-bottom: 3vw;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    font-size: 2vw;
     display: flex;
     align-items: center;
     height: auto;
@@ -41,7 +49,7 @@
 
 @media screen and (max-width: 780px) {
     .FinalSelection {
-        width: 77vw;
+        width: 67vw;
         padding: 0vw 0vw;
         margin: 0vw 0vw 2vw 14vw;
     }
@@ -54,11 +62,13 @@
         margin-bottom: 6vw;
     }
     .FinalSelection__Item-Description {
-        font-size: 4.5vw;
+        font-size: 5.5vw;
+        line-height: 10vw;
+        margin-bottom: 5vw;
       }
     .FinalSelection__Item-Price {
         font-size: 5.5vw;
-        width: 77vw;
+        width: -webkit-fill-available;
         text-align: left;
       }
     h2 {

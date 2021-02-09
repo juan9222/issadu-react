@@ -13,9 +13,6 @@ const OnePieceProvider = (props) => {
         onePiecePrice: null,
         onePiecePriceDiscount: null,
     })
-    // useEffect(() => {
-    //     localStorage.setItem("Cart",JSON.stringify(onePieceObject))
-    // }, [storeOnePieceObject,onePieceObject])
     return (
             <OnePieceContext.Provider value={{onePieceObject,storeOnePieceObject }}>
                 {props.children}

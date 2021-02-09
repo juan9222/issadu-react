@@ -35,6 +35,7 @@ const Customizer = (props) => {
     const [mode, setMode] = useState(bikiniOrOnePiece);
     const [piece, setPiece] = useState("Top")
     const [showCloseSizeCalculator, setShowCloseSizeCalculator] = useState(false);
+    
     async function getCustomizerImages() {
         let imageArray = []
         let topURLs = await APIService.getCloth("Top");
@@ -54,18 +55,18 @@ const Customizer = (props) => {
         })
         cacheImages(imageArray)
       }
-      const cacheImages = async (srcArray) => {
-        const promises= await srcArray.map((src) => {
-          return new Promise(function(resolve,reject) {
-            const img = new Image();
-            img.src = src;
-            img.onload = resolve();
-            img.onerror = reject();
-          });
+    const cacheImages = async (srcArray) => {
+      const promises= await srcArray.map((src) => {
+        return new Promise(function(resolve,reject) {
+          const img = new Image();
+          img.src = src;
+          img.onload = resolve();
+          img.onerror = reject();
         });
-        await Promise.all(promises);
-        setIsLoading(false);
-      }
+      });
+      await Promise.all(promises);
+      setIsLoading(false);
+    }
     useEffect(() => {
         if (isInitialMount.current) {
             getCustomizerImages();
@@ -131,7 +132,7 @@ const Customizer = (props) => {
             <h2>Recuerda</h2>
             <h3 className="Customizer__Advice-Text">Puedes comprar una prenda o el conjunto completo</h3>
             </div>
-            <PreCheckout mode={mode} piece={piece}/>
+            <PreCheckout className="Customizer__PreCheckout" mode={mode} piece={piece}/>
             </PantyProvider>
             </TopProvider>
             </OnePieceProvider>
