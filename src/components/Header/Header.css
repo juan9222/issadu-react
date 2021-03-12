@@ -1,0 +1,277 @@
+
+.Header {
+    height: 56.4vw;
+  }
+  .Header__Bikini{
+      position: absolute;
+      z-index: 3;
+      -webkit-transform: translate(11vw,45vw);
+          -ms-transform: translate(11vw,45vw);
+              transform: translate(11vw,45vw);
+      width: 8vw;
+  }
+  .Header__One {
+      width: 10vw;
+      position: absolute;
+      z-index: 4;
+      -webkit-transform: translate(88.6vw,43.5vw);
+          -ms-transform: translate(88.6vw,43.5vw);
+              transform: translate(88.6vw,43.5vw);
+  }
+  .Header__Title {
+      position: absolute;
+      z-index: 3;
+      -webkit-transform: translate(12vw,18vw);
+          -ms-transform: translate(12vw,18vw);
+              transform: translate(12vw,18vw);
+      color: #3F414C;
+      font-family: "Anton";
+      font-size: 4.8vw;
+      line-height: 6vw;
+  }
+  .Header__Subtitle {
+      position: absolute;
+      z-index: 3;
+      -webkit-transform: translate(12vw,36vw);
+          -ms-transform: translate(12vw,36vw);
+              transform: translate(12vw,36vw);
+      color: #3F414C;
+      font-family: "Muli";
+      font-size: 1.6vw;
+      line-height: 2.4vw;
+      font-weight: 800;
+  }
+  .Header__Easy{
+    color: #00AEEF;
+  }
+  .Header__Customize {
+      color: #00AEEF;
+  }
+  .Header__Background {
+      position: absolute;
+      width: 100vw;
+      height: 56.6vw;
+      z-index: 2;
+      -webkit-transform: translate(0vw, 0vw);
+          -ms-transform: translate(0vw, 0vw);
+              transform: translate(0vw, 0vw);
+  }
+  .Header__Models {
+      position: absolute;
+      width: 34vw;
+      margin: 18.3vw 0vw 0vw 38vw;
+      z-index: 3;
+      -webkit-animation-name: fadeIn;
+              animation-name: fadeIn;
+      -webkit-animation-duration: 0.5s;
+              animation-duration: 0.5s;
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+      -webkit-animation-delay: 0ms;
+              animation-delay: 0ms;
+      -webkit-animation-fill-mode: forwards;
+              animation-fill-mode: forwards;
+  }
+  
+  .Header__Models--Out {
+      position: absolute;
+      width: 34vw;
+      margin: 14.9vw 0vw 0vw 38vw;
+      z-index: 3;
+  }
+  
+  
+  @-webkit-keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+    
+      to {
+        opacity: 1;
+      }
+    }
+  
+  
+  @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+    
+      to {
+        opacity: 1;
+      }
+    }
+  @-webkit-keyframes fadeOut {
+      from {
+        opacity: 1;
+      }
+    
+      to {
+        opacity: 0;
+      }
+    }
+  @keyframes fadeOut {
+      from {
+        opacity: 1;
+      }
+    
+      to {
+        opacity: 0;
+      }
+    }
+  
+  .Header__Main-Logo {
+      position: absolute;
+      -webkit-transform: translate(11vw,2vw);
+          -ms-transform: translate(11vw,2vw);
+              transform: translate(11vw,2vw);
+      z-index: 3;
+      width: 23vw;
+  }
+  .Header__Button-OnePiece {
+      position: absolute;
+      z-index: 3;
+      -webkit-transform: translate(68vw,48.3vw);
+          -ms-transform: translate(68vw,48.3vw);
+              transform: translate(68vw,48.3vw);
+      cursor: pointer;
+      padding: 0.5vw 3.7vw 0.5vw 0.7vw;
+      font-weight: 700;
+      width: 22vw;
+      border-radius: 22vw;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      background: #00AEEF;
+      color: white;
+      font-family: "Muli", sans-serif;
+      text-transform: uppercase;
+      font-size: 1.4vw;
+  }
+  .Header__Button-Bikini {
+      position: absolute;
+      z-index: 3;
+      -webkit-transform: translate(15.4vw,48.3vw);
+          -ms-transform: translate(15.4vw,48.3vw);
+              transform: translate(15.4vw,48.3vw);
+      cursor: pointer;
+      padding: 0.5vw 0.7vw 0.5vw 3.2vw;
+      font-weight: 700;
+      width: 20vw;
+      border-radius: 22vw;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      background: #00AEEF;
+      color: white;
+      font-family: "Muli", sans-serif;
+      text-transform: uppercase;
+      font-size: 1.4vw;
+  }
+  .Header__Button-White {
+      background: #FFFFFF;
+      border-radius: 22vw;
+      width: 2.5vw;
+      height: 2.5vw;
+  }
+  .Header__Button-Right {
+      margin-left: 0.9vw;
+      margin-top: 0.5vw;
+      width: 1vw;
+    }
+  .Header__Button-Left {
+      margin-left: 0.7vw;
+      margin-top: 0.4vw;
+      width: 1vw;
+      -webkit-transform: rotate(180deg);
+          -ms-transform: rotate(180deg);
+              transform: rotate(180deg);
+    }
+  
+    @media screen and (max-width: 780px) {
+      .Header {
+        height: 185vw;
+      }
+      .Header__Background {
+        position: relative;
+        height: 177.6vw;
+        object-fit: cover;
+        object-position: -158vw 0vw;
+      }
+      
+      .BestSellers {
+        transform: translate(0vw,0vw);
+      }
+      .Header__Models {
+        position: absolute;
+        width: 91vw;
+        margin: -102.2vw 0vw 0vw 8vw;
+        /*transform: translate(-132vw,51.7vw);*/
+      }
+      .Header__Button-Bikini {
+        position: absolute;
+        transform: translate(6vw,-17vw);
+        padding: 2.5vw 4.7vw 2.5vw 4.7vw;
+        width: 53vw;
+        border-radius: 22vw;
+        font-size: 4vw;
+      }
+      .Header__Button-White {
+        width: 5.5vw;
+        height: 5.5vw;
+      }
+      .Header__Button-Right {
+        margin-left: 1.7vw;
+        margin-top: 1vw;
+        width: 2.2vw;
+      }
+      .Header__Title {
+        position: absolute;
+        font-size: 12.2vw;
+        line-height: 14vw;
+        transform: translate(23vw,-149vw);
+      }
+      .Header__Main-Logo {
+        position: absolute;
+        width: 48vw;
+        transform: translate(27vw,-176vw);
+        /*transform: translate(-76vw,1vw);*/
+      }
+      .Header__Button-OnePiece {
+        position: absolute;
+        transform: translate(29vw,-31vw);
+        padding: 2.5vw 4.7vw 2.5vw 4.7vw;
+        width: 60vw;
+        border-radius: 22vw;
+        font-size: 4vw;
+      }
+      .Header__Button-Left {
+        margin-left: 1.7vw;
+        margin-top: 1vw;
+        width: 2.2vw;
+      }
+      .Header__Subtitle {
+        display: none;
+      }
+      .Header__Bikini {
+        display: none;
+      }
+      .Header__One {
+        display: none;
+      }
+      .Navbar__Logo {
+        width: 20vw;
+      } 
+    }
