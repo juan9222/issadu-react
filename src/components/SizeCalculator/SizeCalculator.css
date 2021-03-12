@@ -11,7 +11,7 @@
 }
 
 .SizeCalculator__Container {
-    width: fit-content;
+    width: 48vw;
     height: auto;
     background: #3F414C;
     padding: 4vw 4vw;
@@ -31,11 +31,12 @@
 }
 
 .SizeCalculator__Description{
-    color: white;
-    font-family: "Muli", sans-serif;
-    width: 40vw;
-    text-align: justify;
-    padding: 2vw 0vw;
+  color: white;
+  font-family: "Muli", sans-serif;
+  width: auto;
+  text-align: justify;
+  padding: 2vw 0vw;
+  font-size: 1.5vw;
   }
 
 .SizeCalculator__Measure {
@@ -87,9 +88,17 @@ input[type=number] {
 }
 
 .SizeCalculator__Warning {
-  font-size: 2.5vw;
+  font-size: 1.5vw;
   font-family: "Muli", sans-serif;
   color: #00AEEF;
+}
+
+.SizeCalculator__Warning-Link{
+  font-size: 1.5vw;
+  font-family: "Muli", sans-serif;
+  color: #FFFFFF;
+  font-weight: bold;
+  text-decoration: underline !important;
 }
 
 @media screen and (max-width: 780px) {
@@ -123,6 +132,13 @@ input[type=number] {
     font-size: 5.5vw;
     font-family: "Muli", sans-serif;
     color: #00AEEF;
+  }
+  .SizeCalculator__Warning-Link{
+    font-size: 5.5vw;
+    font-family: "Muli", sans-serif;
+    color: #FFFFFF;
+    font-weight: bold;
+    text-decoration: underline !important;
   }
 
 }

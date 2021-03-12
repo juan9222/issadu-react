@@ -12,14 +12,27 @@
     box-sizing: border-box;
 }
 
+.PreCheckout__Payments {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.PreCheckout__PayU {
+    width: 7vw;
+    margin-top: 1vw;
+  }
+
 
 .PreCheckout__Price {
     position: relative;
     z-index: 5;
     width: auto;
     font-family: 'Muli', sans-serif;
-    font-size: 1.7vw;
+    font-size: 1.8vw;
     line-height: 2.7vw;
+    padding-bottom: 3vw;
 }
 
 .PreCheckout__Price-Title {
@@ -29,6 +42,7 @@
 }
 
 .PreCheckout__Price-Discount {
+    font-size: 1.8vw;
     font-weight: 700;
     color: #00AEEF;
 }
@@ -45,7 +59,7 @@
 }
 
 .Bikini__Subtotal-Title {
-    font-size: 3vw;
+    font-size: 2.5vw;
     font-family: "Anton";
     color: #00AEEF;
 }
@@ -127,7 +141,10 @@
     color: #00AEEF;
     font-size: 1vw;
     font-family: "Muli";
-}
+    padding: 0.5vw 2vw;
+    line-height: 1.4vw;
+    text-align: center;
+  }
 
 .PreCheckout__Bikini {
     position: relative;
@@ -150,6 +167,10 @@
         width: 70vw;
         margin: 2vw 0vw 3vw 26vw;      
     }
+    .PreCheckout__PayU {
+        width: 20vw;
+        margin-top: 1vw;
+      }
     .Bikini__Flex-Checkout {
         flex-direction: column;
     }
@@ -171,6 +192,7 @@
     }
     .Bikini__Payment {
         font-size: 4vw;
+        padding: 4vw 0vw;
     }
     .Bikini__Subtotal-Title {
         font-size: 5vw;
@@ -178,5 +200,30 @@
     .Precheckout__Column {
         width: 72vw;
     }
+
+
+.PreCheckout__Price {
+    font-size: 4.8vw;
+    line-height: 7.7vw;
+    margin: 0vw;
+    padding-bottom: 6vw;
+    padding-top: 6vw;
+}
+
+.PreCheckout__Price-Title {
+    font-size: 4.8vw;
+    margin: 0vw;
+}
+
+.PreCheckout__Price-Discount {
+    font-weight: 700;
+    font-size: 4.2vw;
+    color: #00AEEF;
+}
+
+
+.Precheckout__Description-Bold {
+    font-weight: 700;
+}
 }
 

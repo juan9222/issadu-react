@@ -4,6 +4,7 @@ import {TopContext} from '../../context/TopContext.js'
 import {PantyContext} from '../../context/PantyContext.js'
 import {CartContext} from '../../context/CartContext.js'
 import {Link} from 'react-router-dom'
+import PayU from '../../assets/Customizer/PayU.svg' 
 import { v4 as uuidv4 } from 'uuid';
 import './PreCheckout.css'
 
@@ -95,7 +96,7 @@ const PreCheckout = ({mode, piece}) => {
         <br/>
         <div className="Bikini__Flex-Checkout">
         <div className="Bikini__Subtotal">
-            <h2 className="Bikini__Subtotal-Title">RESUMEN</h2>
+            <h2 className="Bikini__Subtotal-Title">TU COMPRA VA EN:</h2>
             {
                 (cart.length > 0) &&
                         <div className="Precheckout__Column">
@@ -128,7 +129,11 @@ const PreCheckout = ({mode, piece}) => {
             <Link to="/checkout">
                 <div className="Bikini__Buy">FINALIZAR COMPRA</div>
             </Link>
-            <h3 className="Bikini__Payment">TODOS LOS MEDIOS DE PAGO</h3>
+            <div className="PreCheckout__Payments">
+            <h3 className="Bikini__Payment">TU PEDIDO TOMARÁ 20 DÍAS EN SER CONFECCIONADO</h3>
+                <h3 className="Bikini__Payment">TODOS LOS MEDIOS DE PAGO CON:</h3>
+                <img className="PreCheckout__PayU" src={PayU} alt="Logo Pay U"/>
+            </div>
             </div>
         </div>
         </div>

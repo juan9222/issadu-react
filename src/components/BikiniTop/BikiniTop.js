@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import './BikiniTop.css'
 
 const BikiniTop = ({topModel, setTopModel, sizeModel, setSizeModel,topColor, setTopColor, tops}) => {       
@@ -22,13 +23,17 @@ const BikiniTop = ({topModel, setTopModel, sizeModel, setSizeModel,topColor, set
                 </div>
                }
                <h2 className="BikiniTop__Title">3.Talla</h2>
-               <h4 className="BikiniTop__Sub">Queremos que tu traje de baño sea como lo imaginaste, usa el botón "Verifica tus Medidas Aquí", lee los términos de devolución aquí.</h4>
+               <h4 className="BikiniTop__Sub">Queremos que tu traje de baño sea como lo imaginaste, usa el botón "Verifica tus Medidas Aquí". <Link className="BikiniTop__SubLegal" to="/legal">Lee los términos de devolución aquí</Link>.</h4>
                <div className="Bikini__Flex-Size"> 
                {
                     tops.map( (top) => (  
                         (topModel === top.reference) ?
                             top.tallas.map((options,index) => {
-                                return <div key={index} className={"BikiniTop__Size " + ((sizeModel === options.talla) ? 'BikiniTop__Size--Selected' : null)} onClick={() => setSizeModel(options.talla)}>{options.talla}</div>
+                                if (options.talla !== "XXL") {
+                                    return <div key={index} className={"BikiniTop__Size " + ((sizeModel === options.talla) ? 'BikiniTop__Size--Selected' : null)} onClick={() => setSizeModel(options.talla)}>{options.talla}</div>
+                                } else {
+                                    return null
+                                }
                             })
                         :
                             null

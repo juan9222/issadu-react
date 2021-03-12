@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import Close from '../../assets/Navbar/close.png';
 import "./SizeCalculator.css"
+
 export default function SizeCalculator({setShowCloseSizeCalculator}) {
     const [sizes, setSizes] = useState({
         bust: "",
@@ -35,15 +36,15 @@ export default function SizeCalculator({setShowCloseSizeCalculator}) {
     }
 
     const calculatePantySize = () => {
-        if ((sizes.hip >= 66 && sizes.hip <= 71) && (sizes.waist >= 96 && sizes.waist <= 99)) {
+        if ((sizes.hip >= 66 && sizes.hip <= 71)) {
             return "S"
-        } else if ((sizes.hip >= 72 && sizes.hip <= 77) && (sizes.waist >= 100 && sizes.waist <= 103)) {
+        } else if ((sizes.hip >= 72 && sizes.hip <= 77)) {
             return "M"
-        } else if ((sizes.hip >= 78 && sizes.hip <= 83) && (sizes.waist >= 104 && sizes.waist <= 107)) {
+        } else if ((sizes.hip >= 78 && sizes.hip <= 83)) {
             return "L"
-        } else if ((sizes.hip >= 84 && sizes.hip <= 88) && (sizes.waist >= 108 && sizes.waist <= 111)) {
+        } else if ((sizes.hip >= 84 && sizes.hip <= 88)) {
             return "XL"
-        } else if ((sizes.hip >= 89 && sizes.hip <= 94) && (sizes.waist >= 112 && sizes.waist <= 117)) {
+        } else if ((sizes.hip >= 89 && sizes.hip <= 94)) {
             return "XXL"
         } else if (sizes.hip === "" && sizes.waist === "" ) {
             return ""
@@ -113,7 +114,7 @@ export default function SizeCalculator({setShowCloseSizeCalculator}) {
                 </div>
                 { 
                             (calculateTopSize() === "-" || calculatePantySize() === "-" || calculateOnePieceSize() === "-" ) && 
-                            <h3 className="SizeCalculator__Warning"> Lamentablemente, tus medidas no están soportadas en nuestro taller de manera estándar.</h3>
+                            <h3 className="SizeCalculator__Warning">Wow, ¡parece que tienes medidas especiales!. Por favor consulta nuestra tabla de medidas estándar <a className="SizeCalculator__Warning-Link" href="https://issadu.com/table.jpeg" target="_blank" rel="noopener noreferrer">aquí</a></h3>
                 }
             </div>
         </div>

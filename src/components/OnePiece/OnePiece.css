@@ -370,7 +370,11 @@ input[type=radio] {
         width: 72vw;
         margin: -36vw 0vw 0vw 26vw;
         overflow-y: scroll;
+        overflow-x: hidden;
         height: 60vw;
+        padding: 3vw 3vw 3vw 1vw;
+        border-top: solid 0.01vw;
+        border-bottom: solid 0.01vw;
     }
     .OnePiece__Step1-Title {
         font-size: 3.4vw;
@@ -403,8 +407,8 @@ input[type=radio] {
       }
     .OnePiece__Color {
         width: 73vw;
-        height: 78vw;
-        margin: -78.8vw 0vw 40vw 25vw;
+        height: 77vw;
+        margin: -78.4vw 0vw 40vw 25vw;
       }
     .OnePiece__Flex-Size {
         width: 72vw;

@@ -35,6 +35,17 @@
     text-align: justify;
   }
 
+  .BikiniTop__SubLegal {
+    font-family: "Muli",sans-serif;
+    font-size: 1vw;
+    padding: 0vw 0vw 1vw 0vw;
+    color: #3F414C;
+    width: 29vw;
+    text-align: justify;
+    font-weight: bold;
+    text-decoration: underline!important;
+  }
+
 .BikiniTop__Size {
     color: #3F414C;
     font-size: 1.6vw;
@@ -74,6 +85,16 @@
     .BikiniTop__Sub {
         font-size: 3vw;
         width: 70vw;
+    }
+    .BikiniTop__SubLegal {
+        font-family: "Muli",sans-serif;
+        font-size: 3vw;
+        padding: 0vw 0vw 1vw 0vw;
+        color: #3F414C;
+        width: 29vw;
+        text-align: justify;
+        font-weight: bold;
+        text-decoration: underline !important;
     }
     .Bikini__Models {
         width: 11vw;

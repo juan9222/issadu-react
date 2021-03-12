@@ -1,4 +1,11 @@
 .BestSellersPage {
-    transform: translate(0vw,-58vw);
-    height: 138vw;
+    padding-top: 0vw;
+    height: auto;
   }
+
+@media screen and (max-width: 780px) {
+  .BestSellersPage {
+    padding-top: 25vw;
+    height: auto;
+  }
+}

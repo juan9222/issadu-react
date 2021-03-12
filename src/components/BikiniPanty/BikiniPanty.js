@@ -26,7 +26,12 @@ const BikiniPanty = ({pantyColor,pantyModel, setPantyModel, sizeModel, setSizeMo
                     pantys.map( (panty) => (  
                         (pantyModel === panty.reference) ?
                             panty.tallas.map((options,index) => {
-                                return <div key={index} className={"BikiniTop__Size " + ((sizeModel === options.talla) ? 'BikiniTop__Size--Selected' : null)} onClick={() => setSizeModel(options.talla)}>{options.talla}</div>
+                                if (options.talla !== "XXL") {
+                                    return <div key={index} className={"BikiniTop__Size " + ((sizeModel === options.talla) ? 'BikiniTop__Size--Selected' : null)} onClick={() => setSizeModel(options.talla)}>{options.talla}</div>
+                                } else {
+                                    return null
+                                }
+                                
                             })
                         :
                             null

@@ -284,13 +284,14 @@ input[type=radio] {
     }
     .Bikini__Girl {
         padding: 0vw 0vw 0vw 25vw;
+        height: 73vw;
     }
     .Bikini__Color {
-        margin: -74vw 0vw 41vw 25vw;
+        margin: -68vw 0vw 41vw 25vw;
     }
     .Bikini__Color-Top {
         width: 73vw;
-        height: 35vw;
+        height: 32vw;
     }
     .Bikini-Main__Top {
         width: 73vw;
@@ -307,11 +308,13 @@ input[type=radio] {
     }
     .Bikini__Customizer {
         width: 72vw;
-        margin: 51vw 0vw 0vw 25vw;
+        margin: 15vw 0vw 0vw 25vw;
         overflow-y: scroll;
+        overflow-x: hidden;
         height: 60vw;
-        padding: 0vw 3vw 0vw 1vw;
-      
+  padding: 3vw 3vw 3vw 1vw;
+        border-top: solid 0.01vw;
+        border-bottom: solid 0.01vw;
     }
     .Bikini__Title {
         font-size: 4.8vw;
@@ -353,4 +356,26 @@ input[type=radio] {
         border: 0.8vw solid #00AEEF;
         border-radius: 100vw;
       }
+      /* width */
+::-webkit-scrollbar {
+    width: 10px;
   }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #00AEEF; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #00AEEF;
+  }
+  }
+

@@ -129,7 +129,11 @@ const OnePiece = ({cloth1ref="Carmen",cloth1color="IP020"}) => {
                 onePieces.map( (onePiece) => (  
                         (onePieceModel === onePiece.reference) ?
                         onePiece.tallas.map((options,index) => {
+                            if (options.talla !== "XXL") {
                                 return <div key={index} className={"OnePiece__Size " + ((sizeModel === options.talla) ? 'OnePiece__Size--Selected' : null)} onClick={() => (setSizeModel(options.talla))}>{options.talla}</div>
+                            } else {
+                                return null
+                            }
                             })
                         :
                             null

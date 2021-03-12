@@ -13,16 +13,12 @@ import SizeCalculator from "../../components/SizeCalculator/SizeCalculator.js"
 import OnePieceProvider from "../../context/OnePieceContext.js"
 import TopProvider from "../../context/TopContext.js"
 import PantyProvider from "../../context/PantyContext.js"
-import Hook from '../../assets/Swimsuits/hook.svg'
+// import Hook from '../../assets/Swimsuits/hook.svg'
 import Question from '../../assets/Swimsuits/questions.svg'
 import Loader from "../../components/Loader/Loader.js"
-
-
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { faHeart } from '@fortawesome/free-regular-svg-icons'
 import './Customizer.css'
 
-const Customizer = (props) => {  
+const Customizer = (props) => { 
     const isInitialMount = useRef(true);
     const [isLoading, setIsLoading] = useState(true);
     const bikiniOrOnePiece = props.location.state.bikiniOrOnePiece;
@@ -121,8 +117,8 @@ const Customizer = (props) => {
                 <br/>
                 <div> 
                     {/* <div className="Customizer__Save"><FontAwesomeIcon icon={faHeart} /> &nbsp; Guardar en mi Closet</div> */}
-                    <div className="Customizer__Design"><img className="Customizer__Hook" src={Hook} alt="Gancho" /> &nbsp; Crear un nuevo diseño</div>
-                    <a href="https://web.whatsapp.com/send?l=es&phone=573044529259" className="Customizer__Contact"><img className="Customizer__Question" src={Question} alt="Escríbenos" /> &nbsp; ¿Tienes dudas? Escríbenos</a>
+                    {/* <div className="Customizer__Design"><img className="Customizer__Hook" src={Hook} alt="Gancho" /> &nbsp; Crear un nuevo diseño</div> */}
+                    <a href="https://web.whatsapp.com/send?l=es&phone=573044837407" className="Customizer__Contact"><img className="Customizer__Question" src={Question} alt="Escríbenos" /> &nbsp; ¿Tienes dudas? Escríbenos</a>
                 </div>
             </div>
             {mode === "Bikini" && <Bikini  cloth1type={cloth1type} cloth1ref={cloth1ref} cloth1color={cloth1color} cloth2type={cloth2type} cloth2ref={cloth2ref} cloth2color={cloth2color} piece={piece} setPiece={setPiece}/>}
