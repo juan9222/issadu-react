@@ -14,7 +14,7 @@ const BikiniTop = ({topModel, setTopModel, sizeModel, setSizeModel,topColor, set
                         tops.map((top) => ( 
                             top.tallas.map((options, index) => (
                                 (options.talla === sizeModel) ?
-                                    <img key={index} className={"Bikini__Models " + ((topModel === top.reference) ? 'Bikini__Models--Selected' : null)} src={`http://issadu.com/web/${top.url_icon}`} alt="Muestra" onClick={() => setTopModel(top.reference)} />
+                                    <img key={index} className={"Bikini__Models " + ((topModel === top.reference) ? 'Bikini__Models--Selected' : null)} src={`https://issadu.com/web/${top.url_icon}`} alt="Muestra" onClick={() => setTopModel(top.reference)} />
                                     :
                                     null
                             ))                       
@@ -48,7 +48,7 @@ const BikiniTop = ({topModel, setTopModel, sizeModel, setSizeModel,topColor, set
                     tops.map( (top) => (  
                         (topModel === top.reference) ?
                         top.color.planos.map((plano,index) => {
-                           return <img key={index} className={"Bikini__Print " + ((topColor === plano.reference) ? 'Bikini__Print--Selected' : null)} src={`http://issadu.com/web/${plano.img_circular}`} alt="Muestra" onClick={() => setTopColor(plano.reference)} style={{"pointerEvents": "all"}} />
+                           return <img key={index} className={"Bikini__Print " + ((topColor === plano.reference) ? 'Bikini__Print--Selected' : null)} src={`https://issadu.com/web/${plano.img_circular}`} alt="Muestra" onClick={() => setTopColor(plano.reference)} style={{"pointerEvents": "all"}} />
                         })
                         :
                         null
@@ -62,7 +62,7 @@ const BikiniTop = ({topModel, setTopModel, sizeModel, setSizeModel,topColor, set
                 tops.map( (top) => (  
                     (topModel === top.reference) ?
                     top.color.estampados.map((estampado,index) => {
-                        return <img key={index} className={"Bikini__Print " + ((topColor === estampado.reference) ? 'Bikini__Print--Selected' : null)} src={`http://issadu.com/web/${estampado.img_circular}`} alt="Muestra" onClick={() => setTopColor(estampado.reference)} style={{"pointerEvents": "all"}} />
+                        return <img key={index} className={"Bikini__Print " + ((topColor === estampado.reference) ? 'Bikini__Print--Selected' : null)} src={`https://issadu.com/web/${estampado.img_circular}`} alt="Muestra" onClick={() => setTopColor(estampado.reference)} style={{"pointerEvents": "all"}} />
                     })
                     :
                     null

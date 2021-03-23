@@ -25,7 +25,7 @@ function Swimsuits() {
                 bestSellers.map( swimsuit => (
                     <div className="Swimsuits__Column"  key={swimsuit.id}>
                         <div className="Swimsuits__DiscountNumber">-{swimsuit.discount}%</div>
-                        <img className="Swimsuits__Image" src={`http://issadu.com/web/${swimsuit.url_img}`} alt="Modelo" />
+                        <img className="Swimsuits__Image" src={`https://issadu.com/web/${swimsuit.url_img}`} alt="Modelo" />
                         <div className="Swimsuits__Subcolumn">
                             <h3 className="Swimsuits__Sub">{swimsuit.description}</h3>
                             <div className="Swimsuits__Flex">

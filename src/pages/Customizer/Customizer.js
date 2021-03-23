@@ -118,7 +118,7 @@ const Customizer = (props) => {
                 <div> 
                     {/* <div className="Customizer__Save"><FontAwesomeIcon icon={faHeart} /> &nbsp; Guardar en mi Closet</div> */}
                     {/* <div className="Customizer__Design"><img className="Customizer__Hook" src={Hook} alt="Gancho" /> &nbsp; Crear un nuevo diseño</div> */}
-                    <a href="https://web.whatsapp.com/send?l=es&phone=573044837407" className="Customizer__Contact"><img className="Customizer__Question" src={Question} alt="Escríbenos" /> &nbsp; ¿Tienes dudas? Escríbenos</a>
+                    <a href="https://web.whatsapp.com/send?l=es&phone=573044837407" target="_blank" rel="noopener noreferrer" className="Customizer__Contact"><img className="Customizer__Question" src={Question} alt="Escríbenos" /> &nbsp; ¿Tienes dudas? Escríbenos</a>
                 </div>
             </div>
             {mode === "Bikini" && <Bikini  cloth1type={cloth1type} cloth1ref={cloth1ref} cloth1color={cloth1color} cloth2type={cloth2type} cloth2ref={cloth2ref} cloth2color={cloth2color} piece={piece} setPiece={setPiece}/>}

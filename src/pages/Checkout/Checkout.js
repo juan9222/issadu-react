@@ -109,7 +109,7 @@ const Checkout = () => {
                 <input form="mainForm" id="email" name="email" type="email"  onChange={formik.handleChange} value={formik.values.email} className="Checkout__Input Checkout__Mail" placeholder="Correo Electrónico"/>
                 {formik.errors.email ? <div className="Checkout__Error"> {formik.errors.email}</div> : null}
                 </div>
-                <h3 className="Checkout__Label Checkout__Label-Contact">Dirección de envío</h3>
+                <h3 className="Checkout__Label Checkout__Label-Contact">Datos de envío</h3>
                 <div className="Checkout__Flex">
                     <div>
                     <input form="mainForm" id="firstName" name="firstName" type="text" onChange={formik.handleChange} value={formik.values.firstName} className="Checkout__Input Checkout__Name" placeholder="Nombre" />

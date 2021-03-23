@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "homepage": "https://issadu.com/",
   "private": true,
-  "proxy": "http://issadu.com/web/client/",
+  "proxy": "https://issadu.com/web/client/",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.30",
     "@fortawesome/free-brands-svg-icons": "^5.14.0",

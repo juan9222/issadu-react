@@ -12,7 +12,7 @@ const BikiniPanty = ({pantyColor,pantyModel, setPantyModel, sizeModel, setSizeMo
                 pantys.map((panty) => ( 
                     panty.tallas.map((options, index) => (
                         (options.talla === sizeModel) ?
-                            <img key={index} className={"Bikini__Models " + ((pantyModel === panty.reference) ? 'Bikini__Models--Selected' : null)} src={`http://issadu.com/web/${panty.url_icon}`} alt="Muestra" onClick={() => setPantyModel(panty.reference)} />
+                            <img key={index} className={"Bikini__Models " + ((pantyModel === panty.reference) ? 'Bikini__Models--Selected' : null)} src={`https://issadu.com/web/${panty.url_icon}`} alt="Muestra" onClick={() => setPantyModel(panty.reference)} />
                             :
                             null
                     ))                       
@@ -49,7 +49,7 @@ const BikiniPanty = ({pantyColor,pantyModel, setPantyModel, sizeModel, setSizeMo
                            return <img 
                            key={index} 
                            className={"Bikini__Print " + ((pantyColor === plano.reference) ? 'Bikini__Print--Selected' : null)} 
-                           src={`http://issadu.com/web/${plano.img_circular}`} 
+                           src={`https://issadu.com/web/${plano.img_circular}`} 
                            alt="Muestra" 
                            onClick={() => setPantyColor(plano.reference)} 
                            style={{"pointerEvents": "all"}}
@@ -69,7 +69,7 @@ const BikiniPanty = ({pantyColor,pantyModel, setPantyModel, sizeModel, setSizeMo
                     panty.color.estampados.map((estampado,index) => {
                         return <img key={index} 
                         className={"Bikini__Print " + ((pantyColor === estampado.reference) ? 'Bikini__Print--Selected' : null)} 
-                        src={`http://issadu.com/web/${estampado.img_circular}`} 
+                        src={`https://issadu.com/web/${estampado.img_circular}`} 
                         alt="Muestra" 
                         onClick={() => setPantyColor(estampado.reference)} 
                         style={{"pointerEvents": "all"}} />

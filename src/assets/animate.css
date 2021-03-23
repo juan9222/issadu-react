@@ -1,13 +1,5 @@
 @charset "UTF-8";
 
-/*!
- * animate.css -https://daneden.github.io/animate.css/
- * Version - 3.7.2
- * Licensed under the MIT license - http://opensource.org/licenses/MIT
- *
- * Copyright (c) 2019 Daniel Eden
- */
-
 @-webkit-keyframes bounce {
   from,
   20%,
@@ -490,7 +482,6 @@
   animation-name: tada;
 }
 
-/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
 
 @-webkit-keyframes wobble {
   from {
@@ -2848,8 +2839,6 @@
   animation-name: jackInTheBox;
 }
 
-/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
-
 @-webkit-keyframes rollIn {
   from {
     opacity: 0;
@@ -2883,7 +2872,6 @@
   animation-name: rollIn;
 }
 
-/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
 
 @-webkit-keyframes rollOut {
   from {

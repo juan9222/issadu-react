@@ -216,7 +216,7 @@
         transform: translate(0vw,0vw);
       }
       .Header__Models {
-        position: absolute;
+        position: relative;
         width: 91vw;
         margin: -102.2vw 0vw 0vw 8vw;
         /*transform: translate(-132vw,51.7vw);*/
@@ -245,6 +245,7 @@
         transform: translate(23vw,-149vw);
       }
       .Header__Main-Logo {
+        display: none;
         position: absolute;
         width: 48vw;
         transform: translate(27vw,-176vw);

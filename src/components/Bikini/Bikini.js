@@ -114,7 +114,7 @@ const Bikini = ({piece,setPiece,cloth1ref = "Daniela",cloth1color = "IP020",clot
                 (topModel === top.reference) ?
                     top.tallas.map((options,index) => (
                         (sizeModel === options.talla) ?
-                        <img  key={index} className="Bikini-Main__Top" alt="Top Main Bikini" src={`http://issadu.com/web/${options.fotos}`}/>
+                        <img  key={index} className="Bikini-Main__Top" alt="Top Main Bikini" src={`https://issadu.com/web/${options.fotos}`}/>
                         :
                         null
                     ))
@@ -127,7 +127,7 @@ const Bikini = ({piece,setPiece,cloth1ref = "Daniela",cloth1color = "IP020",clot
                 (pantyModel === panty.reference) ?
                     panty.tallas.map((options,index) => (
                         (sizeModel === options.talla) ?
-                        <img  key={index} className="Bikini-Main__Bottom" alt="Bottom Main Bikini"  src={`http://issadu.com/web/${options.fotos}`}/>
+                        <img  key={index} className="Bikini-Main__Bottom" alt="Bottom Main Bikini"  src={`https://issadu.com/web/${options.fotos}`}/>
                         :
                         null
                     ))
@@ -142,7 +142,7 @@ const Bikini = ({piece,setPiece,cloth1ref = "Daniela",cloth1color = "IP020",clot
                 (topModel === top.reference) ?
                     top.color.planos.map((plano, index) =>(
                         (topColor === plano.reference) ?
-                            <img key={index} className="Bikini__Color-Top" src={`http://issadu.com/web/${plano.img_rectangular}`} alt="Top Color"/>
+                            <img key={index} className="Bikini__Color-Top" src={`https://issadu.com/web/${plano.img_rectangular}`} alt="Top Color"/>
                         :
                         null
                     ))
@@ -155,7 +155,7 @@ const Bikini = ({piece,setPiece,cloth1ref = "Daniela",cloth1color = "IP020",clot
                 (topModel === top.reference) ?
                     top.color.estampados.map((estampado, index) =>(
                         (topColor === estampado.reference) ?
-                        <img key={index} className="Bikini__Color-Top" src={`http://issadu.com/web/${estampado.img_rectangular}`} alt="Top Color"/>
+                        <img key={index} className="Bikini__Color-Top" src={`https://issadu.com/web/${estampado.img_rectangular}`} alt="Top Color"/>
                         :
                         null
                     ))
@@ -168,7 +168,7 @@ const Bikini = ({piece,setPiece,cloth1ref = "Daniela",cloth1color = "IP020",clot
                 (pantyModel === panty.reference) ?
                     panty.color.planos.map((plano, index) =>(
                         (pantyColor === plano.reference) ?
-                        <img key={index} className="Bikini__Color-Top" src={`http://issadu.com/web/${plano.img_rectangular}`} alt="Top Color"/>
+                        <img key={index} className="Bikini__Color-Top" src={`https://issadu.com/web/${plano.img_rectangular}`} alt="Top Color"/>
                         :
                         null
                     ))
@@ -181,7 +181,7 @@ const Bikini = ({piece,setPiece,cloth1ref = "Daniela",cloth1color = "IP020",clot
                 (pantyModel === panty.reference) ?
                     panty.color.estampados.map((estampado, index) =>(
                         (pantyColor === estampado.reference) ?
-                        <img key={index} className="Bikini__Color-Bottom" src={`http://issadu.com/web/${estampado.img_rectangular}`} alt="Top Color"/>
+                        <img key={index} className="Bikini__Color-Bottom" src={`https://issadu.com/web/${estampado.img_rectangular}`} alt="Top Color"/>
                         :
                         null
                     ))
