@@ -47,7 +47,7 @@
     position: fixed;
     display: flex;
     flex-direction: column;
-    font-family: "Anton";
+    font-family: "Anton", sans-serif;
     z-index: 100;
 }
 

@@ -130,7 +130,7 @@ const PreCheckout = ({mode, piece}) => {
                 <div className="Bikini__Buy">FINALIZAR COMPRA</div>
             </Link>
             <div className="PreCheckout__Payments">
-            <h3 className="Bikini__Payment">TU PEDIDO TOMARÁ 20 DÍAS EN SER CONFECCIONADO</h3>
+            <h3 className="Bikini__Payment">TU PEDIDO TOMARÁ 10 DÍAS EN SER CONFECCIONADO</h3>
                 <h3 className="Bikini__Payment">TODOS LOS MEDIOS DE PAGO CON:</h3>
                 <img className="PreCheckout__PayU" src={PayU} alt="Logo Pay U"/>
             </div>

@@ -25,7 +25,7 @@
           -ms-transform: translate(12vw,18vw);
               transform: translate(12vw,18vw);
       color: #3F414C;
-      font-family: "Anton";
+      font-family: "Anton", sans-serif;
       font-size: 4.8vw;
       line-height: 6vw;
   }
@@ -90,8 +90,6 @@
         opacity: 1;
       }
     }
-  
-  
   @keyframes fadeIn {
       from {
         opacity: 0;

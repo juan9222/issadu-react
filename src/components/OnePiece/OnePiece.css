@@ -239,7 +239,7 @@ input[type=radio] {
   }
 
 .OnePiece__Sub {
-    font-family: "Anton";
+    font-family: "Anton", sans-serif;
     color: #3F414C;
     font-size: 3vw;
     padding: 1vw 0vw;
@@ -257,7 +257,7 @@ input[type=radio] {
 }
 
 .OnePiece__Top {
-    font-family: "Anton";
+    font-family: "Anton", sans-serif;
     color: #3F414C;
     font-size: 3vw;
     cursor: pointer
@@ -268,13 +268,13 @@ input[type=radio] {
 }
 
 .OnePiece__Pipe {
-    font-family: "Anton";
+    font-family: "Anton", sans-serif;
     color: #3F414C;
     font-size: 3vw;
 }
 
 .OnePiece__Panty {
-    font-family: "Anton";
+    font-family: "Anton", sans-serif;
     color: #3F414C;
     font-size: 3vw;
     cursor: pointer
@@ -309,7 +309,7 @@ input[type=radio] {
     background: #00AEEF;
     padding: 1vw 2vw;
     border-radius: 1vw;
-    font-family: "Anton";
+    font-family: "Anton", sans-serif;
     font-size: 2vw;
     cursor: pointer;
     border-style: solid;
@@ -334,7 +334,7 @@ input[type=radio] {
     }
 
     .Customizer__Price-Title {
-        font-family: "Anton";
+      font-family: "Anton", sans-serif;
         color: #00AEEF;
         font-size: 1.8vw;
     }

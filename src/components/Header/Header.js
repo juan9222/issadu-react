@@ -55,7 +55,7 @@ const Header = props => {
             <img className="Header__Main-Logo" src={Logo} alt="Logo ISSADUN" />
             <Link to={{
                 pathname: "/customizer",
-                state: { bikiniOrOnePiece: "Bikini" }
+                search: "?bikiniOrOnePiece=Bikini" 
             }}>
             <div className="Header__Button-Bikini">
                 ARMA TU BIKINI AQUÍ
@@ -66,7 +66,7 @@ const Header = props => {
             </ Link>
             <Link to={{
                 pathname: "/customizer",
-                state: { bikiniOrOnePiece: "One Piece" }
+                search:  `?bikiniOrOnePiece=${encodeURIComponent("One Piece")}`
             }}>
             <div className="Header__Button-OnePiece">
             <div className="Header__Button-White">
@@ -75,7 +75,7 @@ const Header = props => {
                 ARMA TU ENTERIZO AQUÍ 
             </div>
             </ Link>
-            <h1 className="Header__Title"> <span className="Header__Customize">PERSONALIZA</span> <br />TU VESTIDO <br /> DE BAÑO</h1>
+            <h1 className="Header__Title"> <span className="Header__Customize">ARMA</span> <br />TU VESTIDO <br /> DE BAÑO</h1>
             <h2 className="Header__Subtitle">Recíbelo en tu casa <br />
             <span className="Header__Easy">Fácil • Rápido • Seguro</span> <br />
             Envíos a toda Colombia</h2>

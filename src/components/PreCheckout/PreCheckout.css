@@ -36,7 +36,7 @@
 }
 
 .PreCheckout__Price-Title {
-    font-family: "Anton";
+    font-family: "Anton", sans-serif;
     color: #00AEEF;
     font-size: 1.8vw;
 }
@@ -60,7 +60,7 @@
 
 .Bikini__Subtotal-Title {
     font-size: 2.5vw;
-    font-family: "Anton";
+    font-family: "Anton", sans-serif;
     color: #00AEEF;
 }
 

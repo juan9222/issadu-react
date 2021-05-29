@@ -17,17 +17,20 @@ import PantyProvider from "../../context/PantyContext.js"
 import Question from '../../assets/Swimsuits/questions.svg'
 import Loader from "../../components/Loader/Loader.js"
 import './Customizer.css'
+import {useQuery} from '../../hooks/useQuery' 
+import {get} from 'lodash'
 
 const Customizer = (props) => { 
+    let query = useQuery();
     const isInitialMount = useRef(true);
     const [isLoading, setIsLoading] = useState(true);
-    const bikiniOrOnePiece = props.location.state.bikiniOrOnePiece;
-    const cloth1type = props.location.state.cloth1type;
-    const cloth1ref =  props.location.state.cloth1ref;
-    const cloth1color =  props.location.state.cloth1color;
-    const cloth2type = props.location.state.cloth2type;
-    const cloth2ref =  props.location.state.cloth2ref;
-    const cloth2color = props.location.state.cloth2color;
+    const bikiniOrOnePiece = query.get("bikiniOrOnePiece");
+    const cloth1type = get(props,"location.state.cloth1type","Top");
+    const cloth1ref =  get(props,"location.state.cloth1ref","Daniela");
+    const cloth1color =  get(props,"location.state.cloth1color","IP020");
+    const cloth2type = get(props,"location.state.cloth2type","Panty");
+    const cloth2ref =  get(props,"location.state.cloth2ref","Carolina");
+    const cloth2color =  get(props,"location.state.cloth2color","IP020");
     const [mode, setMode] = useState(bikiniOrOnePiece);
     const [piece, setPiece] = useState("Top")
     const [showCloseSizeCalculator, setShowCloseSizeCalculator] = useState(false);

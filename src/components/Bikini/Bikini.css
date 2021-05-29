@@ -201,7 +201,7 @@ input[type=radio] {
 }
 
 .Bikini__Title {
-    font-family: "Anton";
+    font-family: "Anton", sans-serif;
     color: #00AEEF;
     font-size: 1.8vw;
 }
@@ -230,7 +230,7 @@ input[type=radio] {
 }
 
 .Bikini__Top {
-    font-family: "Anton";
+    font-family: "Anton", sans-serif;
     color: #3F414C;
     font-size: 2vw;
     cursor: pointer;
@@ -248,13 +248,13 @@ input[type=radio] {
 }
 
 .Bikini__Pipe {
-    font-family: "Anton";
+    font-family: "Anton", sans-serif;
     color: #3F414C;
     font-size: 3vw;
 }
 
 .Bikini__Panty {
-    font-family: "Anton";
+    font-family: "Anton", sans-serif;
     color: #3F414C;
     font-size: 2vw;
     cursor: pointer;

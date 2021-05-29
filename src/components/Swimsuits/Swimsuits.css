@@ -40,13 +40,13 @@
 
 .Swimsuits__Title {
   color: #00AEEF;
-  font-family: "Anton";
+  font-family: "Anton", sans-serif;
   font-size: 1.6vw;
 }
 
 .Swimsuits__Sub {
   color: #3F414C;
-  font-family: "Anton";
+  font-family: "Anton", sans-serif;
   font-size: 1.6vw;
 } 
 

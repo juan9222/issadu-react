@@ -3,11 +3,11 @@ import APIService from '../../services/APIService.js'
 import {OnePieceContext} from '../../context/OnePieceContext.js'
 import './OnePiece.css'
 
-const OnePiece = ({cloth1ref="Carmen",cloth1color="IP020"}) => {
+const OnePiece = (props) => {
     const [onePieces, setOnePieces] = useState([])
     const [onePieceProductId, setOnePieceProductId] = useState(0)
-    const [onePieceModel, setOnePieceModel] = useState(cloth1ref)
-    const [onePieceColor, setOnePieceColor] = useState(cloth1color)
+    const [onePieceModel, setOnePieceModel] = useState("Carmen")
+    const [onePieceColor, setOnePieceColor] = useState("IP020")
     const [sizeModel, setSizeModel] = useState("S")
     const [onePiecePrice, setOnePiecePrice] = useState(0)
     const [onePieceDiscountedPrice, setOnePieceDiscountedPrice] = useState(0)
